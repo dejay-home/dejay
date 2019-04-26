@@ -26,7 +26,7 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
 #header.scrolling-up {
     position: fixed;
     top:0px;
-    left:0;
+    left:0; 
     background:rgba(32,32,32,0.7);
     animation: scrolling-up 1s;animation-direction: alternate;
 }
