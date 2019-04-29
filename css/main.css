@@ -44,10 +44,11 @@
 .gridnav li:last-child a { border:none;}
 .portwrap { position:relative; padding:84px 0 320px;}
 .portwrap .grid { position:relative; font-size:0;}
-.portwrap .btn { position:absolute; top:50%; width:51px; height:97px; z-index:2; background:no-repeat center; transform:translate(0,-50%); -webkit-transform:translate(0,-50%);}
+.portwrap .btn { position:absolute; top:50%; width:51px; height:97px; z-index:2; background:no-repeat center; transform:translate(0,-50%); -webkit-transform:translate(0,-50%); font-size:0;}
 .portwrap .btn.btn_prev { left:-94px; background-image:url(../img/common/btn_prev_51x97.png);}
 .portwrap .btn.btn_next { right:-94px; background-image:url(../img/common/btn_next_51x97.png);}
 .portwrap .grid .list { position:relative; display:inline-block; width:425px; margin-right:40px;}
 .portwrap .grid .list:nth-child(3n+3) { margin-right:0;}
-.portwrap .grid .list > div { position:absolute; left:0; bottom:0; z-index:1; padding:0 0 0 30px; background-color:#151515;}
-.portwrap .grid .list > div h3 { font-size:20px;}
+.portwrap .grid .list > div { position:absolute; left:0; bottom:-48px; z-index:1; width:296px; padding:30px; background-color:#151515; box-sizing:border-box;}
+.portwrap .grid .list > div h3 { padding-bottom:12px; font-size:20px;}
+.portwrap .grid .list > div span { font-size:17px; color:rgba(255,255,255,0.5);}
