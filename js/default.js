@@ -31,9 +31,9 @@ $(document).ready(function(){
 
       $('.btn_top').fadeOut()
     };
-
-    // $('.this_scroll').text(thisScroll);
-    // $('.last_scroll').text(lastScroll);
+	  
+	$('.this_scroll').text(thisScroll);
+	$('.last_scroll').text(lastScroll);
   });
 
 });

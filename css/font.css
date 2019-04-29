@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'NanumSquare';
+    font-family: 'NanumSquare', sans-serif;
     font-weight: 400;
     src: url(../font/NanumSquareR.eot);
     src: url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
@@ -7,7 +7,7 @@
         url(../font/NanumSquareR.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'NanumSquare';
+    font-family: 'NanumSquare', sans-serif;
     font-weight: 700;
     src: url(../font/NanumSquareB.eot);
     src: url(../font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
@@ -15,7 +15,7 @@
         url(../font/NanumSquareB.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'NanumSquare';
+    font-family: 'NanumSquare', sans-serif;
     font-weight: 800;
     src: url(../font/NanumSquareEB.eot);
     src: url(../font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
@@ -23,7 +23,7 @@
         url(../font/NanumSquareEB.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'NanumSquare';
+    font-family: 'NanumSquare', sans-serif;
     font-weight: 300;
     src: url(../font/NanumSquareL.eot);
     src: url(../font/NanumSquareL.eot?#iefix) format('embedded-opentype'),
@@ -33,13 +33,13 @@
 
 /* NanumBarunGothic */
 @font-face{
-    font-family: 'NanumBarunGothic';
+    font-family: 'NanumBarunGothic', sans-serif;
     font-weight: 300;
     src: url(../font/NanumBarunGothic.eot)format('eot');
     src: url(../font/NanumBarunGothic.woff) format('woff');
 }
 @font-face{
-    font-family: 'NanumBarunGothic';
+    font-family: 'NanumBarunGothic', sans-serif;
     font-weight: 800;
     src: url(../font/NanumBarunGothicBold.eot)format('eot');
     src: url(../fonts/NanumBarunGothicBold.woff) format('woff');

@@ -7,13 +7,61 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
 .clear:after { content:""; display:block; clear:both;}
 .skip { position:absolute; left:0; top:-100px; width:100%; height:50px; background:#000; text-align:center; color:#fff; line-height:50px;}
 .skip:focus { top:0;}
+.mauto { position:relative; margin:0 auto; width:1358px;}
+.fl { float:left; vertical-align:top;}
+.fr { float:right; vertical-align:top;}
+.s_title1 { position:relative; display:inline-block; padding-right:238px; font-size:15px; color:#fff; font-weight:bold; font-family: 'NanumBarunGothic', sans-serif;}
+.s_title1 .title_line { position:absolute; right:0; top:50%; margin-top:-1px; width:200px; height:2px; background:#2099b6;}
+.title1 { line-height:114px; font-size:80px; color:#fff; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
+.title2 { line-height:120px; font-size:74px; color:#fff; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
+.title3 { line-height:50px; font-size:44px; color:#fff; font-weight:bold; letter-spacing:-0.02em; font-family: 'NanumSquare', sans-serif;}
+.next_page { padding:192px 0 136px; background: url(../img/common/container_bgLine3.png) repeat-y top center #1d1d1d;}
+.next_page .mauto { overflow:hidden;}
+.next_title1 { display:inline-block; padding-bottom:76px; line-height:28px; font-size:18px; color:#fff; font-family: 'NanumSquare', sans-serif;}
+.next_title1 span { position:relative; display:inline-block; margin:0 30px 0 3px; padding-right:16px; font-weight:bold; vertical-align:top;}
+.next_title1 span:after { content:""; position:absolute; right:0; top:9px; width:11px; height:13px; background:url(../img/common/ico_next.png) no-repeat center;}
+.next_title2 { margin-left:-24px; font-size:80px; color:#2c2c2c; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
+.next_title2 strong { color:#2099b6;}
+
+#wrap {height: 100%; max-width: 1920px;}
 
 
-#wrap {height: 100%;max-width: 1920px;}
+#container {
+	min-height: 100%;
+}
+/* 구분선 type1 */
 #container {
     min-height: 100%;
-    background: url("../img/common/container_bgLine.png") repeat-y top center;
+    background: url("../img/common/container_bgLine3.png") repeat-y top center;
 }
+/* 구분선 type2 */
+/*
+#container .lines {
+	width:1358px;
+	position:fixed;
+	left:50%;
+	top:0;
+	z-index:1;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+	
+}
+#container .lines span {
+	position:absolute; 
+	left:0;
+	top:0;
+	width:1px;
+	height:100vh;
+	background:rgba(120,120,120,0.2);
+}
+#container .lines span:nth-child(2){
+	left:50%;
+}
+#container .lines span:nth-child(3){
+	left:100%;
+}
+*/
+
 
 #header {
     position: fixed;
@@ -66,7 +114,7 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
     .gnb li a {opacity:0.9;}
 
     .language {
-        font-family: 'NanumBarunGothic', 'NanumSquare';
+        font-family: 'NanumBarunGothic', 'NanumSquare', sans-serif;
         position: absolute;
         top:39px;
         right:67px;
@@ -77,10 +125,12 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
 
 #content {position: relative;}
 
+
     .rnb {
         position: fixed;
         top:350px;
         right:-40px;
+		z-index:10;
         transform: rotate(270deg);
         -ms-transform: rotate(270deg); /* IE9 이상 */
         -webkit-transform: rotate(270deg); /* Safafi and Chrome */
@@ -90,7 +140,7 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
     .rnb li {
         display: inline-block;
         padding-left:30px;
-        font-family: 'NanumBarunGothic', 'NanumSquare';
+        font-family: 'NanumBarunGothic', 'NanumSquare', sans-serif;
         font-size:15px;
     }
     .rnb li a {
@@ -108,6 +158,7 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
         position: fixed;
         right:105px;
         bottom:100px;
+		z-index:10;
         width: 66px;
         line-height: 66px;
         text-align: center;
@@ -120,5 +171,56 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
         min-height: 500px;
     }
 
-#footer {position: relative;}
+#footer { position: relative; z-index:1; padding:135px 0 63px; background:#151515;}
+	#footer .dejay_logo {
+		display: inline-block;
+		margin-left:3px;
+		margin-top:4px;
+		width: 143px;
+		height: 23px;
+		background: url("../img/common/dejayLogo.png") no-repeat;
+		background-size:143px auto;
+		vertical-align: top;
+	}
+	#footer .foot_snb { display:inline-block;vertical-align: top;}
+	#footer .foot_snb li {
+		margin:0 0 32px 127px;
+	}
+	#footer .foot_snb li a {
+		display:inline-block;
+		line-height:30px;
+		font-size:30px;
+		color:#fff;
+		font-family: 'NanumSquare', sans-serif;
 
+	}
+	#footer .mauto > .fr { width:543px;}
+	#footer .term1 li {
+		float: left;
+		margin-right:24px;
+	}
+	#footer .term1 li a {
+		display:inline-block;
+		line-height:20px;
+		font-size:14px;
+	}
+	#footer .term1 li:last-child { margin-right:0;}
+	#footer .term2 { padding-top:12px;}
+	#footer .term2 li {
+		line-height:38px;
+		font-size:14px;
+		color:#fff;
+		font-weight:300;
+	}
+	#footer .term2 li:nth-child(3),
+	#footer .term2 li:nth-child(4),
+	#footer .term2 li:nth-child(5) {
+		display:inline-block;
+		padding-right:24px;
+		vertical-align:top;
+	}
+	#footer .copy {
+		padding-top:112px;
+		font-size:14px;
+		color:#fff;
+	}

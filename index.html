@@ -2,19 +2,17 @@
 <html lang="ko">
 <head>
 	<title>::DEJAY::</title>
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/html5shiv.js"></script><!-- IE 8 이하에서 HTML5 태그 지원 -->
 	<script language="javascript" type="text/javascript" src="js/default.js"></script>
 	<script language="javascript" type="text/javascript" src="js/main.js"></script>
-
+	<script language="javascript" type="text/javascript" src="js/swiper.min.js"></script>
 </head>
 <body>
 	<span style="position: fixed;bottom:0;"><span class="this_scroll"></span>, <span class="last_scroll"></span></span>
@@ -22,6 +20,11 @@
 	<div id="wrap">
 		<h1 class="hide">드제이 홈페이지에 오시것을 환영합니다.</h1>
 		<div id="container">
+			<div class="lines">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<div id="header">
 				<a href="index.html" class="dejay_logo">
 					<span class="hide">DEJAY</span>
@@ -36,44 +39,277 @@
 						<li><a href="contactus.html">CONTACTUS</a></li>
 					</ul>
 				</div>
-
 				<div class="language">
 					<a href="#" class="acitve">KOR</a> / <a href="#">ENG</a>
 				</div>
-
 			</div>
-	
 			<div class="content">
-				<h2 class="hide">MAIN</h2>
-				
-				<div class="section main_visual">
-					visual
+				<h2 class="hide">COMPANY</h2>
+				<div class="main_visual">
+					<div class="swiper-container slide1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide area1">
+								<img src="img/main/bg_visual1.png" alt="">
+								<div class="mauto">
+									<div class="titlebox">
+										<h3 class="s_title1">
+											DEJAY NETWORK CONSULTING GROUP
+											<span class="title_line"></span>
+										</h3>
+										<div class="title1">TOTAL QUALITY CONTROL <br>FOR BUSINESS</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide area2">
+								<img src="img/main/bg_visual2.png" alt="">
+								<div class="mauto">
+									<div class="titlebox">
+										<h3 class="s_title1">
+											DEJAY NETWORK CONSULTING GROUP
+											<span class="title_line"></span>
+										</h3>
+										<div class="title1">FLAWLESS TECHNIQUE <br>FOR PROJECT</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide area3">
+								<img src="img/main/bg_visual3.png" alt="">
+								<div class="mauto">
+									<div class="titlebox">
+										<h3 class="s_title1">
+											DEJAY NETWORK CONSULTING GROUP
+											<span class="title_line"></span>
+										</h3>
+										<div class="title1">REVOLUTIONARY IDEA <br>FOR SUCCESS</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pag"></div>
+					</div>
+					<script>
+					var swiper = new Swiper('.slide1', {
+						pagination: {
+							el: '.slide1 .pag',
+							clickable: true,
+						},
+//						autoplay: {
+//							delay: 3000,
+//							disableOnInteraction: false,
+//					  	},
+						loop:true,
+					});
+					</script>
 				</div>
-				<div id="portfiolo" class="section main_inner01">
-					section1
+				<div id="whattodo" class="section main_inner01">
+					<div class="mauto">
+						<div class="titlebox">
+							<h3 class="title1">WHAT <br>TO DO</h3>
+							<p>기술의 발전과 더불어 변화되 사회규제와 소비자의 다양한 요구에 발맞추어 <br>고객의 환경과 요구에 가장 적합한 정보 시스템을 제공하고 있습니다.</p>
+						</div>
+						<div class="sortbox clear">
+							<div class="leftlayer">
+								<div class="list">
+									<img src="img/main/bg_si.png" alt="">
+									<div>
+										<h4>SI / SM</h4>
+										<span>Application / WEB</span>
+									</div>
+								</div>
+								<div class="list">
+									<img src="img/main/bg_solution.png" alt="">
+									<div>
+										<h4>SOLUTION</h4>
+										<span>CMS / EMS / BMS</span>
+									</div>
+								</div>
+							</div>
+							<div class="rightlayer">
+								<div class="list">
+									<img src="img/main/bg_iot.png" alt="">
+									<div>
+										<h4>IOT</h4>
+										<span>ROBOT / SMART DEVICE</span>
+									</div>
+								</div>
+								<div class="list">
+									<img src="img/main/bg_lms.png" alt="">
+									<div>
+										<h4>LMS</h4>
+										<span>학사관리시스템 / 교육관리시스템</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div id="whatweus" class="section main_inner02">
-					section2
+				<div id="whatweus" class="section main_inner02 clear">
+					<div class="titlebox">
+						<h3 class="title1">WHAT <br>WE US</h3>
+						<ul id="counter">
+						<li>
+							<span>15</span>
+							<div>YEAR</div>
+						</li>
+						<li>
+							<span>40</span>
+							<div>CLIENTS</div>
+						</li>
+						<li>
+							<span>20</span>
+							<div>SPECIALIST</div>
+						</li>
+						<li>
+							<span>500</span>
+							<div>PROJECTS</div>
+						</li>
+						</ul>
+					</div>
+					<div class="client clear">
+						<ul class="clear">
+						<li>
+							<img src="img/logo/logo_lg.png" alt="LG전자">
+						</li>
+						<li>
+							<img src="img/logo/logo_hyundai.png" alt="현대자동차">
+						</li>
+						<li>
+							<img src="img/logo/logo_samsung.png" alt="삼성전자">
+						</li>
+						<li>
+							<img src="img/logo/logo_ollehkt.png" alt="올레 케이티">
+						</li>
+						<li>
+							<img src="img/logo/logo_incheonair.png" alt="인천국제공항">
+						</li>
+						<li>
+							<img src="img/logo/logo_imbc.png" alt="iMBC캠퍼스">
+						</li>
+						<li>
+							<img src="img/logo/logo_samsung_hos.png" alt="삼성서울병원">
+						</li>
+						<li>
+							<img src="img/logo/logo_skplanet.png" alt="SK 플래닛">
+						</li>
+						<li>
+							<img src="img/logo/logo_hanamstar.png" alt="하남스타필드">
+						</li>
+						<li>
+							<img src="img/logo/logo_seoulcyber.png" alt="서울사이버대학교">
+						</li>
+						<li>
+							<img src="img/logo/logo_sookmyung.png" alt="숙명여자대학교">
+						</li>
+						<li>
+							<img src="img/logo/logo_pantech.png" alt="팬텍">
+						</li>
+						<li>
+							<img src="img/logo/logo_kbs.png" alt="KBS">
+						</li>
+						<li>
+							<img src="img/logo/logo_bnkcap.png" alt="BNK캐피탈">
+						</li>
+						<li>
+							<img src="img/logo/logo_jejuair.png" alt="제주항공">
+						</li>
+						<li>
+							<img src="img/logo/logo_gtelp.png" alt="지텔프코리아">
+						</li>
+						</ul>
+					</div>
 				</div>
-				<div id="whattodo" class="section main_inner03">
-					section3
+				<div id="portfolio" class="section main_inner03">
+					<div class="mauto">
+						<div class="titlebox">
+							<h3 class="title1">PORT <br>FOLIO</h3>
+							<p>콘설팅, 기획, UI/UX, 시스템 설계, 계발, 통합, 유지보수 <br>등 IT 전 영역에 걸쳐 다양한 서비스를 제공하였습니다.</p>
+						</div>
+						<ul class="gridnav clear">
+						<li><a href="#a" class="on">VIEW ALL</a></li>
+						<li><a href="#a">SI/SM</a></li>
+						<li><a href="#a">APP/WEB</a></li>
+						<li><a href="#a">SOLUTION</a></li>
+						<li><a href="#a">IOT</a></li>
+						</ul>
+						<div class="portwrap">
+							<a href="#a" class="btn_prev btn">이전</a>
+							<a href="#a" class="btn_next btn">다음</a>
+							<div class="grid">
+								<a href="#a" class="list">
+									<img src="img/reference/reference1.png" alt="">
+									<div>
+										<h3>KT Y 데이터박스</h3>
+										<span>2018-06-07</span>
+									</div>
+								</a>
+								<a href="#a" class="list">
+									<img src="img/reference/reference2.png" alt="">
+									<div>
+										<h3>KT Y 데이터박스</h3>
+										<span>2018-06-07</span>
+									</div>
+								</a>
+								<a href="#a" class="list">
+									<img src="img/reference/reference3.png" alt="">
+									<div>
+										<h3>KT Y 데이터박스</h3>
+										<span>2018-06-07</span>
+									</div>
+								</a>
+							</div>
+						</div>	
+					</div>				
 				</div>
-
 				<div class="rnb">
 					<ul>
-						<li><a class="section_link01" href="#portfiolo">PORTFOILO</a></li>
-						<li><a class="section_link02" href="#whatweus">WHAT WE US</a></li>
-						<li><a class="section_link03" href="#whattodo">WHAT TO DO</a></li>
+						<li><a class="section_link01" href="javascript:;">PORTFOILO</a></li>
+						<li><a class="section_link02" href="javascript:;">WHAT WE US</a></li>
+						<li><a class="section_link03" href="javascript:;">WHAT TO DO</a></li>
 					</ul>
 				</div>
 				<a href="#" class="btn_top">TOP</a>
 			</div>
-	
+			<div class="next_page">
+				<div class="mauto">
+					<a href="#a" class="next_title1">
+						<span>NEXT</span>
+						주식회사 드제이를 소개합니다.
+					</a>
+					<h2 class="next_title2"><strong>C</strong>OMPANY</h2>
+				</div>
+			</div>
 			<div id="footer">
-				
+				<div class="mauto clear">
+					<div class="fl">
+						<a href="index.html" class="dejay_logo">
+							<span class="hide">DEJAY</span>
+						</a>
+						<ul class="foot_snb">
+						<li><a href="company.html">COMPANY</a></li>
+						<li><a href="business.html">BUSINESS</a></li>
+						<li><a href="reference.html">REFERENCE</a></li>
+						<li><a href="recruit.html">RECRUIT</a></li>
+						<li><a href="contactus.html">CONTACTUS</a></li>
+						</ul>
+					</div>
+					<div class="fr">
+						<ul class="term1 clear">
+						<li><a href="#a">이용약관</a></li>
+						<li><a href="#a">개인정보처리방침</a></li>
+						<li><a href="#a">오시는 길</a></li>
+						</ul>
+						<ul class="term2 clear" style="font-size:0;">
+						<li>(주)드제이</li>
+						<li>서울특별시 마포구 서교동 395-151 2층</li>
+						<li>02-2266-4433</li>
+						<li>대표이사 이용훈</li>
+						<li>사업자등록번호 261-81-20556</li>
+						</ul>
+						<p class="copy">Copyright ⓒ 2019 DEJAY.All rights reserved</p>
+					</div>
+				</div>
 			</div>
 		</div>		
 	</div>
-
 </body>
 </html>
