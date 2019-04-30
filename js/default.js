@@ -9,6 +9,9 @@ $(document).ready(function(){
     var thisScroll = $(this).scrollTop();
     
     if (thisScroll > 10) {
+      if ($('#header').hasClass('')) {
+        $('#header').addClass('scrolling-down');
+      };
       if (thisScroll > lastScroll) {
         if (delta) {
           $('#header').removeClass();

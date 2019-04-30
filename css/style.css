@@ -18,7 +18,7 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
 .next_title1 { display:inline-block; padding-bottom:76px; line-height:28px; font-size:18px; color:#fff; font-family: 'NanumSquare', sans-serif;}
 .next_title1 span { position:relative; display:inline-block; margin:0 30px 0 3px; padding-right:16px; font-weight:bold; vertical-align:top;}
 .next_title1 span:after { content:""; position:absolute; right:0; top:9px; width:11px; height:13px; background:url(../img/common/ico_next.png) no-repeat center;}
-.next_title2 { margin-left:-24px; font-size:80px; color:#2c2c2c; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
+.next_title2 { display: block;margin-left:-24px; font-size:80px; color:#2c2c2c; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
 .next_title2 strong { color:#2099b6;}
 
 #wrap {height: 100%; max-width: 1920px;}
