@@ -4,7 +4,7 @@
 .swiper-slide-active .s_title1 .title_line { transform:scaleX(1); -webkit-transform:scaleX(1); transition-delay:200ms; -webkit-transition-delay:200ms;}
 
 .slide1 { height:1081px;}
-.slide1 .swiper-slide { background:no-repeat center; background-size:cover; text-align:left;}
+.slide1 .swiper-slide { overflow: hidden; background:no-repeat center; background-size:cover; text-align:left;}
 /*
 .slide1 .swiper-slide.area1 { background-image:url(../img/main/bg_visual1.png);}
 .slide1 .swiper-slide.area2 { background-image:url(../img/main/bg_visual2.png);}
