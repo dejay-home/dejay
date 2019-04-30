@@ -2,7 +2,7 @@
 
 /* common */
 html {height: 100%;}
-body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;background: #151515;}
+body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;background: #151515;}
 .clear { zoom:1;clear:both;}
 .clear:after { content:""; display:block; clear:both;}
 .skip { position:absolute; left:0; top:-100px; width:100%; height:50px; background:#000; text-align:center; color:#fff; line-height:50px;}
@@ -183,9 +183,24 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
         min-height: 500px;
     }
     .section .titlebox2 { position:absolute; left:0; top:160px;padding-left: 50px;}
-    .section .titlebox2 .title_line { position:absolute; left:0; top:0; margin-top:-1px; width:4px; height:100%; background:#1f8ca6;}
-    .section .titlebox2 .title3 { font-size:44px; color:#fff; font-weight:bold; letter-spacing:-0.02em; font-family: 'NanumSquare', sans-serif;}
-    .section .titlebox2 .info { padding-top: 40px;line-height:45px;}
+    .section .titlebox2 .title_line { position:absolute; left:0; top:0; margin-top:-1px; width:4px; height:0%; background:#1f8ca6;}
+    .section .titlebox2.hover .title_line { height:100%;animation: sub_title_hover 1s;animation-direction: alternate;}
+        @keyframes sub_title_hover {
+            0%   {height: 0%;opacity: 0;}
+            100% {height: 100%;opacity: 1;}
+        }
+    .section .titlebox2 .title3 { position: relative;top:50px;opacity: 0;font-size:44px; color:#fff; font-weight:bold; letter-spacing:-0.02em; font-family: 'NanumSquare', sans-serif;}
+    .section .titlebox2 .info { margin-top:90px;opacity: 0;line-height:45px;}
+    .section.active .titlebox2 .title3 {top:0px;opacity: 1;animation: sub_title_active 1s;animation-direction: alternate;}
+        @keyframes sub_title_active {
+            0%   {top: 50px;opacity: 0;}
+            100% {top: 0;opacity: 1;}
+        }
+    .section.active .titlebox2 .info.active {margin-top: 40px;opacity: 1;animation: sub_info_active 1s;animation-direction: alternate;}
+        @keyframes sub_info_active {
+            0%   {margin-top: 90px;}
+            100% {margin-top: 40px;}
+        }
 
 #footer { position: relative; z-index:1; padding:135px 0 63px; background:#151515;}
 	#footer .dejay_logo {

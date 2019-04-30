@@ -36,7 +36,27 @@ $(document).ready(function(){
     };
 	  
 	$('.this_scroll').text(thisScroll);
-	$('.last_scroll').text(lastScroll);
+	//$('.last_scroll').text(lastScroll);
   });
 
+
+  subTitleHover();
+
 });
+
+
+function subTitleHover(){
+
+  var subTitle = $('.section .titlebox2');
+
+  $(subTitle).hover(function() { 
+    $(this).addClass('hover'); //hover시 붙이기
+  }, function() {
+    $(this).removeClass('hover'); //hover시 때기
+  });
+
+
+
+
+  
+};
