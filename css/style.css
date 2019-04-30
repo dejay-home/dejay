@@ -128,9 +128,11 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
 
     .rnb {
         position: fixed;
-        top:350px;
-        right:-40px;
-		z-index:10;
+        width: 600px;
+        bottom:400px;
+        right:-160px;
+        z-index:10;
+        text-align: right;
         transform: rotate(270deg);
         -ms-transform: rotate(270deg); /* IE9 이상 */
         -webkit-transform: rotate(270deg); /* Safafi and Chrome */

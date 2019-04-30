@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.visual_area {background: url('../img/company/bg_visual1.png') no-repeat center center;}
+.visual_area .mauto {height:100%;}
+.visual_area .titlebox { position:absolute; left:0; top:50%; transform:translate(0,-50%); -webkit-transform:translate(0,-50%);}
+
 
  
 
