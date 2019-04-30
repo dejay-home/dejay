@@ -31,7 +31,6 @@ function sectionClick(){
 		$('html, body').animate({
 			scrollTop:company_inner03
         },300, 'swing');
-        alert(company_inner03);
 	});
 	
 	$(".section_link03").click(function(){
@@ -44,15 +43,13 @@ function sectionClick(){
 		$('html, body').animate({
 			scrollTop:company_inner01
         },300, 'swing');
-        alert(company_inner01);
     });
     
 };
 
 function scrollAction (){
 
-    //var visual_area_H = $('.visual_area').height();
-    var company_inner01_H = $('.company_inner01').height();
+    var company_inner01_H = $('.company_inner01').offset().top;
     var company_inner02_H = $('.company_inner02').offset().top;
     var company_inner03_H = $('.company_inner03').offset().top;
     var company_inner04_H = $('.company_inner04').offset().top;
