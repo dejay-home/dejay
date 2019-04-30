@@ -13,8 +13,6 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
 .s_title1 { position:relative; display:inline-block; padding-right:238px; font-size:15px; color:#fff; font-weight:bold; font-family: 'NanumBarunGothic', sans-serif;}
 .s_title1 .title_line { position:absolute; right:0; top:50%; margin-top:-1px; width:200px; height:2px; background:#2099b6;}
 .title1 { line-height:114px; font-size:80px; color:#fff; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
-.title2 { line-height:120px; font-size:74px; color:#fff; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
-.title3 { line-height:50px; font-size:44px; color:#fff; font-weight:bold; letter-spacing:-0.02em; font-family: 'NanumSquare', sans-serif;}
 .next_page { padding:192px 0 136px; background: url(../img/common/container_bgLine3.png) repeat-y top center #1d1d1d;}
 .next_page .mauto { overflow:hidden;}
 .next_title1 { display:inline-block; padding-bottom:76px; line-height:28px; font-size:18px; color:#fff; font-family: 'NanumSquare', sans-serif;}
@@ -125,7 +123,6 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
 
 #content {position: relative;}
 
-
     .rnb {
         position: fixed;
         width: 600px;
@@ -168,10 +165,27 @@ body {height: 100%;font-size:17px; font-family:'NanumSquare', sans-serif;backgro
         background-color: #313131;
     }
 
+    .visual_area .mauto {height:100%;}
+    .visual_area .titlebox { position:absolute; left:0; top:50%; transform:translate(0,-50%); -webkit-transform:translate(0,-50%);}
+    .visual_area .title2 {
+        line-height:120px; 
+        font-size:100px; 
+        color:#fff; 
+        font-weight:bold; 
+        letter-spacing:-0.06em; 
+        font-family: 'NanumSquare', sans-serif;
+        opacity: 0.8;
+        padding-top:20px;
+    }
+
     .section {
         position: relative;
         min-height: 500px;
     }
+    .section .titlebox2 { position:absolute; left:0; top:160px;padding-left: 50px;}
+    .section .titlebox2 .title_line { position:absolute; left:0; top:0; margin-top:-1px; width:4px; height:100%; background:#1f8ca6;}
+    .section .titlebox2 .title3 { font-size:44px; color:#fff; font-weight:bold; letter-spacing:-0.02em; font-family: 'NanumSquare', sans-serif;}
+    .section .titlebox2 .info { padding-top: 40px;line-height:45px;}
 
 #footer { position: relative; z-index:1; padding:135px 0 63px; background:#151515;}
 	#footer .dejay_logo {
