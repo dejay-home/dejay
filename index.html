@@ -13,6 +13,7 @@
 	<script language="javascript" type="text/javascript" src="js/default.js"></script>
 	<script language="javascript" type="text/javascript" src="js/main.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/plugin/isotope.pkgd.js"></script>
 </head>
 <body>
 	<span style="position: fixed;bottom:0;"><span class="this_scroll"></span>, <span class="last_scroll"></span></span>
@@ -225,40 +226,48 @@
 							<p>콘설팅, 기획, UI/UX, 시스템 설계, 계발, 통합, 유지보수 <br>등 IT 전 영역에 걸쳐 다양한 서비스를 제공하였습니다.</p>
 						</div>
 						<ul class="gridnav clear">
-						<li><a href="#a" class="on">VIEW ALL</a></li>
-						<li><a href="#a">SI/SM</a></li>
-						<li><a href="#a">APP/WEB</a></li>
-						<li><a href="#a">SOLUTION</a></li>
-						<li><a href="#a">IOT</a></li>
+						<li class="on"><a href="#a" data-filter="*">VIEW ALL</a></li>
+						<li><a href="#a" data-filter=".si">SI/SM</a></li>
+						<li><a href="#a" data-filter=".app">APP/WEB</a></li>
+						<li><a href="#a" data-filter=".solution">SOLUTION</a></li>
+						<li><a href="#a" data-filter=".iot">IOT</a></li>
 						</ul>
 						<div class="portwrap">
-							<a href="#a" class="btn_prev btn">이전</a>
-							<a href="#a" class="btn_next btn">다음</a>
+							<a id="back" href="javascript:;" class="btn_prev btn">이전</a>
+							<a id="next" href="javascript:;" class="btn_next btn">다음</a>
 							<div class="grid">
-								<a href="#a" class="list">
-									<img src="img/reference/reference1.png" alt="">
-									<div>
-										<h3>KT Y 데이터박스</h3>
-										<span>2018-06-07</span>
-									</div>
-								</a>
-								<a href="#a" class="list">
-									<img src="img/reference/reference2.png" alt="">
-									<div>
-										<h3>KT Y 데이터박스</h3>
-										<span>2018-06-07</span>
-									</div>
-								</a>
-								<a href="#a" class="list">
-									<img src="img/reference/reference3.png" alt="">
-									<div>
-										<h3>KT Y 데이터박스</h3>
-										<span>2018-06-07</span>
-									</div>
-								</a>
+								<ul>
+								<li class="grid-item iot">
+									<a href="#a" class="list">
+										<img src="img/reference/reference1.png" alt="">
+										<div>
+											<h3>KT Y 데이터박스</h3>
+											<span>2018-06-07</span>
+										</div>
+									</a>
+								</li>
+								<li class="grid-item app">
+									<a href="#a" class="list">
+										<img src="img/reference/reference2.png" alt="">
+										<div>
+											<h3>KT Y 데이터박스</h3>
+											<span>2018-06-07</span>
+										</div>
+									</a>
+								</li>
+								<li class="grid-item solution">
+									<a href="#a" class="list">
+										<img src="img/reference/reference3.png" alt="">
+										<div>
+											<h3>KT Y 데이터박스</h3>
+											<span>2018-06-07</span>
+										</div>
+									</a>
+								</li>
+								</ul>
 							</div>
 						</div>	
-					</div>				
+					</div>
 				</div>
 				<div class="rnb">
 					<ul>
