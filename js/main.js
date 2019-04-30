@@ -1,7 +1,49 @@
 $(document).ready(function(){  
 
-    sectionClick();
-  
+	sectionClick();
+
+	var $grid = $('.grid').isotope({
+		itemSelector:'.grid-item',
+		layoutMode:'fitRows',
+	});
+	$('.gridnav li a').click(function(){
+		var value = $(this).attr('data-filter');
+		$grid.isotope({
+			filter:value
+		});
+		$(this).parent('li').addClass('on').siblings().removeClass('on');
+	});
+
+	var imgs;
+	var img_count;
+	var img_position = 1;
+
+	imgs = $(".grid ul");
+	img_count = imgs.children().length;
+
+	$('#back').click(function(){
+		back();
+	});
+	$('#next').click(function(){
+		next();
+	});
+	function back(){
+		if ( 1 < img_position ){
+			imgs.animate({
+				left:'+=465px'
+			});
+			img_position--;
+		}
+	};
+	
+	function next(){
+		if ( img_count > img_position ){
+			imgs.animate({
+				left:'-=465px'
+			});
+			img_position++;
+		}
+	};
 });
 
 function sectionClick(){
@@ -34,3 +76,4 @@ function sectionClick(){
 		},300, 'swing');
 	});
 };
+
