@@ -8,12 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/html5shiv.js"></script><!-- IE 8 이하에서 HTML5 태그 지원 -->
 	<script language="javascript" type="text/javascript" src="js/default.js"></script>
 	<script language="javascript" type="text/javascript" src="js/main.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper.min.js"></script>
-	<script language="javascript" type="text/javascript" src="js/plugin/isotope.pkgd.js"></script>
 </head>
 <body>
 	<span style="position: fixed;bottom:0;"><span class="this_scroll"></span>, <span class="last_scroll"></span></span>
@@ -21,11 +21,12 @@
 	<div id="wrap">
 		<h1 class="hide">드제이 홈페이지에 오시것을 환영합니다.</h1>
 		<div id="container">
-			<div class="lines">
+			<!-- <div class="lines">
 				<span></span>
 				<span></span>
 				<span></span>
-			</div>
+			</div> -->
+			<div class="scroll"><a href="#a"></a></div>
 			<div id="header">
 				<a href="index.html" class="dejay_logo">
 					<span class="hide">DEJAY</span>
@@ -90,14 +91,18 @@
 					</div>
 					<script>
 					var swiper = new Swiper('.slide1', {
+						// fade: { crossFade: true },
+						// virtualTranslate: true,
+						// speed:2000,
+						// effect: 'fade',
 						pagination: {
 							el: '.slide1 .pag',
 							clickable: true,
 						},
-//						autoplay: {
-//							delay: 3000,
-//							disableOnInteraction: false,
-//					  	},
+						autoplay: {
+							delay: 5000,
+							disableOnInteraction: false,
+					  	},
 						loop:true,
 					});
 					</script>
@@ -226,47 +231,160 @@
 							<p>콘설팅, 기획, UI/UX, 시스템 설계, 계발, 통합, 유지보수 <br>등 IT 전 영역에 걸쳐 다양한 서비스를 제공하였습니다.</p>
 						</div>
 						<ul class="gridnav clear">
-						<li class="on"><a href="#a" data-filter="*">VIEW ALL</a></li>
-						<li><a href="#a" data-filter=".si">SI/SM</a></li>
-						<li><a href="#a" data-filter=".app">APP/WEB</a></li>
-						<li><a href="#a" data-filter=".solution">SOLUTION</a></li>
-						<li><a href="#a" data-filter=".iot">IOT</a></li>
+						<li class="on"><a href="#a" class="all">VIEW ALL</a></li>
+						<li><a href="#a" class="si">SI/SM</a></li>
+						<li><a href="#a" class="app">APP/WEB</a></li>
+						<li><a href="#a" class="solution">SOLUTION</a></li>
+						<li><a href="#a" class="iot">IOT</a></li>
 						</ul>
 						<div class="portwrap">
-							<a id="back" href="javascript:;" class="btn_prev btn">이전</a>
-							<a id="next" href="javascript:;" class="btn_next btn">다음</a>
-							<div class="grid">
-								<ul>
-								<li class="grid-item iot">
-									<a href="#a" class="list">
-										<img src="img/reference/reference1.png" alt="">
-										<div>
-											<h3>KT Y 데이터박스</h3>
-											<span>2018-06-07</span>
-										</div>
-									</a>
-								</li>
-								<li class="grid-item app">
-									<a href="#a" class="list">
-										<img src="img/reference/reference2.png" alt="">
-										<div>
-											<h3>KT Y 데이터박스</h3>
-											<span>2018-06-07</span>
-										</div>
-									</a>
-								</li>
-								<li class="grid-item solution">
-									<a href="#a" class="list">
-										<img src="img/reference/reference3.png" alt="">
-										<div>
-											<h3>KT Y 데이터박스</h3>
-											<span>2018-06-07</span>
-										</div>
-									</a>
-								</li>
-								</ul>
+							<a href="#a" class="btn s2btn_next">다음</a>
+							<a href="#a" class="btn s2btn_prev">이전</a>
+							<div class="swiper-container slide2">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" data-filter="app">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference1.png" alt="">
+											<div>
+												<h3>app1</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="solution">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference3.png" alt=""></p>
+											<div>
+												<h3>solution1</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="si">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference5.png" alt=""></p>
+											<div>
+												<h3>si1</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="app">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference8.png" alt=""></p>
+											<div>
+												<h3>app2</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="solution">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference7.png" alt=""></p>
+											<div>
+												<h3>solution2</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="app">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference6.png" alt=""></p>
+											<div>
+												<h3>app3</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="si">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference2.png" alt=""></p>
+											<div>
+												<h3>si2</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="iot">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference4.png" alt=""></p>
+											<div>
+												<h3>iot1</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="solution">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference5.png" alt=""></p>
+											<div>
+												<h3>solution3</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide" data-filter="iot">
+										<a href="#a" class="list">
+											<p><img src="img/reference/reference8.png" alt=""></p>
+											<div>
+												<h3>iot2</h3>
+												<span>2018-06-07</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
 							</div>
-						</div>	
+							<script type="text/javascript">
+							var myswiper = new Swiper('.slide2', {
+								pagination: '.swiper-pagination',
+								slidesPerView: 3,
+								slidesPerColumn: 1,
+								spaceBetween: 40,
+								navigation: {
+									nextEl: '.s2btn_next',
+									prevEl: '.s2btn_prev',
+								},
+							});
+							$('.gridnav li a').click(function(){
+								var filter = $(this).attr('class');
+								$(this).parent('li').addClass('on').siblings().removeClass('on');
+
+								if(myswiper != null) myswiper.destroy();
+
+								if(filter=="all"){
+									$("[data-filter]").removeClass("non-swiper-slide").addClass("swiper-slide").show();
+									console.log("[data-filter='"+filter+"']");
+									myswiper.destroy();
+									myswiper = new Swiper('.slide2', {
+										pagination: '.swiper-pagination',
+										slidesPerView: 3,
+										spaceBetween: 40,
+										navigation: {
+											nextEl: '.s2btn_next',
+											prevEl: '.s2btn_prev',
+										},
+									});
+								}
+								else {
+									$(".slide2 .swiper-slide").not("[data-filter='"+filter+"']").addClass("non-swiper-slide").removeClass("swiper-slide").hide();
+									$("[data-filter='"+filter+"']").removeClass("non-swiper-slide").addClass("swiper-slide").show();
+									console.log("[data-filter='"+filter+"']");
+									myswiper.destroy();
+									myswiper = new Swiper('.slide2', {
+										pagination: '.swiper-pagination',
+										slidesPerView: 3,
+										spaceBetween: 40,
+										navigation: {
+											nextEl: '.s2btn_next',
+											prevEl: '.s2btn_prev',
+										},
+									});
+								}
+							});
+							</script>
+						</div>
+						<a href="reference.html" class="viewmore">VIEW MORE</a>
 					</div>
 				</div>
 				<div class="rnb">
@@ -280,11 +398,11 @@
 			</div>
 			<div class="next_page">
 				<div class="mauto">
-					<a href="#a" class="next_title1">
+					<h2 class="next_title1">
 						<span>NEXT</span>
 						주식회사 드제이를 소개합니다.
-					</a>
-					<h2 class="next_title2"><strong>C</strong>OMPANY</h2>
+					</h2>
+					<a href="#a" class="next_title2"><strong>C</strong>OMPANY</a>
 				</div>
 			</div>
 			<div id="footer">

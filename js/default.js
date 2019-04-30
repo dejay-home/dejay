@@ -27,12 +27,14 @@ $(document).ready(function(){
       }
       lastScroll = $(window).scrollTop();
 
-      $('.btn_top').fadeIn()
+      $('.btn_top').fadeIn();
+      $('.scroll a').css('opacity', '0');
     };
     if (thisScroll < 10) {
       $('#header').removeClass();
 
-      $('.btn_top').fadeOut()
+      $('.btn_top').fadeOut();
+      $('.scroll a').css('opacity', '1');
     };
 	  
 	$('.this_scroll').text(thisScroll);
