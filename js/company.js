@@ -59,25 +59,35 @@ function scrollAction (){
 
     $(window).on('scroll', function() {
 
-        var actionScroll = $(this).scrollTop() + 300;
+        var actionScroll = $(this).scrollTop() + 400;
         
         if (company_inner01_H < actionScroll) {
             $('.company_inner01').addClass('active');
             setTimeout(function() { 
                 $('.company_inner01 .info').addClass('active'); 
             }, 300);
-            if (company_inner02_H > actionScroll) {
-                $('.company_inner01').removeClass('active');
-                $('.company_inner01 .info').removeClass('active');
-            }
         };
 
         if (company_inner02_H < actionScroll) {
             $('.company_inner02').addClass('active');
             setTimeout(function() { 
-              $('.company_inner02 .info').addClass('active'); 
-           }, 300);
-          };
+                $('.company_inner02 .info').addClass('active'); 
+            }, 300);
+        };
+
+        if (company_inner03_H < actionScroll) {
+            $('.company_inner03').addClass('active');
+            setTimeout(function() { 
+                $('.company_inner03 .info').addClass('active'); 
+            }, 300);
+        };
+
+        if (company_inner04_H < actionScroll) {
+            $('.company_inner04').addClass('active');
+            setTimeout(function() { 
+                $('.company_inner04 .info').addClass('active'); 
+            }, 300);
+        };
     });
 	//alert(visual_area_H);
 
