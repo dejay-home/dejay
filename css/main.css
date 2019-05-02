@@ -4,19 +4,24 @@
 .swiper-slide-active .s_title1 .title_line { transform:scaleX(1); -webkit-transform:scaleX(1); transition-delay:200ms; -webkit-transition-delay:200ms;}
 
 .slide1 { height:1081px;}
-.slide1 .swiper-slide { overflow: hidden; background:no-repeat center; background-size:cover; text-align:left;}
-/*
+.slide1 .swiper-slide { overflow: hidden; background-repeat:no-repeat; background-position:50% 50%; background-size:cover; text-align:left;}
+.slide1 .swiper-slide .bg { overflow: hidden; position:absolute; left:0; top:0; width: 100%; z-index:1; background-repeat:repeat-y; background-position:top center; height:100%; background-image:url(../img/common/container_bgLine3.png);}
 .slide1 .swiper-slide.area1 { background-image:url(../img/main/bg_visual1.png);}
 .slide1 .swiper-slide.area2 { background-image:url(../img/main/bg_visual2.png);}
 .slide1 .swiper-slide.area3 { background-image:url(../img/main/bg_visual3.png);}
-*/
 .slide1 .swiper-slide img { position:absolute; left:50%; top:50%; z-index:-1; height:100%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);}
-
-.slide1 .swiper-slide .mauto { height:100%;}
+.slide1 .swiper-slide .mauto { position:absolute; left:50%; top:0; z-index:2; height:100%; transform:translate(-50%,0); -webkit-transform:translate(-50%,0);}
 .slide1 .swiper-slide .titlebox { position:absolute; left:0; top:50%; transform:translate(0,-50%); -webkit-transform:translate(0,-50%);}
 .slide1 .pag { position:absolute; left:50%; bottom:20%; z-index:1; transform:translate(-50%,0); -webkit-transform:translate(-50%,0); font-size:0;}
 .slide1 .pag span { display:inline-block; margin:0 19px; width:14px; height:14px; border:1px solid #fff; border-radius:100%; background:transparent; box-sizing:border-box;}
 .slide1 .pag span.swiper-pagination-bullet-active { background:#fff;}
+/* .slide1 .line_wrap { position:absolute; width:1358px; left:50%; top:0; z-index:1; transform:translate(-50%,0); -webkit-transform:translate(-50%,0);}
+.slide1 .line1,
+.slide1 .line2,
+.slide1 .line3 { position: absolute; top:0; width:1px; height:1081px; background:#787878; opacity:0.2;}
+.slide1 .line1 { left:0;}
+.slide1 .line2 { left:50%;}
+.slide1 .line3 { right:0;} */
 
 .section .titlebox { overflow:hidden; margin-left:50%; width:50%;}
 .section .titlebox .title1 { position:relative; left:-7px;}
@@ -66,31 +71,6 @@
 .portwrap .slide2 .list > div h3 { padding-bottom:12px; font-size:20px;}
 .portwrap .slide2 .list > div span { font-size:17px; color:rgba(255,255,255,0.5);}
 
-
-.scroll { position: absolute; left:50%; width:1358px; bottom:0; z-index:20; transform: translate(-50%,0); -webkit-transform: translate(-50%,0);}
-.scroll a { position: absolute; bottom: 60px; right:-10px; display: block; z-index: 200; transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out; -webkit-transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out; transform: none; height: 72px; width: 28px; margin-left: -14px; cursor: pointer;}
-.scroll a:after { position: absolute; display: block; width:60px; left:26px; bottom:-16px; content: 'SCROLL'; text-align:center; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: bold; color:rgba(255,255,255,0.8); line-height:normal; font-size:15px; transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform-origin: 0 0; -webkit-transform-origin: 0 0;}
-.scroll a:before { position: absolute; content: ""; display:block; left:0; bottom:0; width:17px; height:66px; background:url(../img/common/ico_scrolldown.png) no-repeat center; animation: scroll-arrow 4000ms infinite; -webkit-animation: scroll-arrow 4000ms infinite;}
-@keyframes scroll-arrow {
-    0%, 40%, 50%, 60%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    }
-    45% {
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-    }
-    55% {
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-    }
-}
 .viewmore { position:absolute; right:-5px; top:190px; padding-right:17px; font-size:15px; color:#fff; font-weight:bold;}
 .viewmore:after { content:""; position:absolute; right:0; top:50%; width:11px; height:3px; background:#30a0bb; transform:translate(0,-50%) rotate(-90deg); -webkit-transform:translate(0,-50%) rotate(-90deg);}
 .viewmore:before { content:""; position:absolute; right:0; top:50%; width:11px; height:3px; background:#30a0bb; transform:translate(0,-50%); -webkit-transform:translate(0,-50%)}
