@@ -206,7 +206,9 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         position: relative;
         min-height: 500px;
     }
-    .section .titlebox2 { position:absolute; left:0; top:160px;padding-left: 50px;}
+    .section .titlebox2 { position:absolute; top:160px; padding-left: 50px;}
+    .section .titlebox2.left { left:0;}
+    .section .titlebox2.right { right:0;}
     .section .titlebox2 .title_line { position:absolute; left:0; top:0; margin-top:-1px; width:4px; height:0%; background:#1f8ca6;}
     .section .titlebox2.hover .title_line { height:100%;animation: sub_title_hover 1s;animation-direction: alternate;}
         @keyframes sub_title_hover {

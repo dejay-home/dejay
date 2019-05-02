@@ -4,10 +4,8 @@
 .visual_area .title2 { position: relative;}
 .visual_area .title2 span { position:absolute; left:170px; top:30px; font-size:35px; color:rgba(255,255,255,0.9); letter-spacing: -0.025em;}
 
+.section { height:1080px;}
 .business_inner01 { height: 1080px;}
-.business_inner01 .inner_table {position: absolute;top:610px;right:60%;}
-.business_inner01 .inner_table li {padding:22px 5px 18px 5px;border-bottom: 1px solid #252525;}
-.business_inner01 .inner_table li label {display: inline-block;width: 95px;color:#fff;font-weight: bold;}
 .business_inner01 .inner_img {
     position: absolute;
     top:360px;
@@ -15,25 +13,11 @@
     width: 50%;
     height: 588px;
     overflow: hidden;
-    background: url('../img/business/bg_overview.png') no-repeat center center;
+    background: url('../img/business/bg_si1.png') no-repeat center center;
 }
 
-.business_inner02 {height: 1300px;}
-.business_inner02 .organization {position: relative;margin-top:465px;}
-.business_inner02 .organization .ceo {
-    position: absolute;
-    top:0px;
-    left:50%;
-    margin-left: -113px;
-    width: 226px;
-    height: 266px;
-    font-size: 36px;
-    font-weight: bold;
-    color:#fff;
-    line-height: 266px;
-    text-align: center;
-    background: url('../img/business/@polygon1.png') no-repeat;
-}
+.business_inner02 {height: 1080px;}
+
 
 
  
