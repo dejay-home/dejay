@@ -3,6 +3,35 @@
 .visual_area {background: url('../img/company/bg_visual1.png') no-repeat center center;}
 
 .company_inner01 {height: 1080px;}
+.company_inner01 .inner_table {position: absolute;top:610px;right:60%;}
+.company_inner01 .inner_table li {padding:22px 5px 18px 5px;border-bottom: 1px solid #252525;}
+.company_inner01 .inner_table li label {display: inline-block;width: 95px;color:#fff;font-weight: bold;}
+.company_inner01 .inner_img {
+    position: absolute;
+    top:360px;
+    right:0px;
+    width: 50%;
+    height: 588px;
+    overflow: hidden;
+    background: url('../img/company/bg_overview.png') no-repeat center center;
+}
+
+.company_inner02 {height: 1300px;}
+.company_inner02 .organization {position: relative;margin-top:465px;}
+.company_inner02 .organization .ceo {
+    position: absolute;
+    top:0px;
+    left:50%;
+    margin-left: -113px;
+    width: 226px;
+    height: 266px;
+    font-size: 36px;
+    font-weight: bold;
+    color:#fff;
+    line-height: 266px;
+    text-align: center;
+    background: url('../img/company/@polygon1.png') no-repeat;
+}
 
 
  
