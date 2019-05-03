@@ -167,6 +167,7 @@
 .company_inner03 .history_list li img {width: 367px;}
 .company_inner03 .history_list .viewmore {display: inline-block;margin-left:50%;margin-bottom: 30px;}
 .company_inner03 .history_list .viewmore span {margin-left:-4px;color:#2099b6}
+.company_inner03 .history_list .viewmore_hide.hide {display: none;}
 
 .company_inner04 .client { padding:400px 0 100px 0;}
 .company_inner04 .client li { float:left; padding:30px 0; width:25%; text-align:center;}

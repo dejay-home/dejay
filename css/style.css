@@ -136,7 +136,8 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         display: inline-block;
         font-size:18px;
     }
-    .gnb li a {opacity:0.9;}
+    .gnb li a {opacity:0.6;}
+    .gnb li.acitve a {opacity:1;}
 
     .language {
         font-family: 'NanumBarunGothic', 'NanumSquare', sans-serif;
@@ -178,6 +179,7 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         height: 29px;
         border-bottom: 1px solid #1e7f96;
         color:#1e7f96;
+        opacity:1;
     }
     .btn_top {
         display: none;
