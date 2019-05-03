@@ -31,11 +31,13 @@
     line-height: 266px;
     text-align: center;
     background: url('../img/company/@polygon1.png') no-repeat;
+    opacity: 0;
 }
 .company_inner02 .organization .line {
     position:absolute; 
     height:1px; 
     background:#2c2c2c;
+    opacity: 0;
 }
 .company_inner02 .organization .line1 {
     left:167px; 
@@ -66,7 +68,7 @@
     -ms-transform: rotate(369.4deg); /* IE9 이상 */
 }
 .company_inner02 .organization > ul {padding-top:350px;font-size: 0;}
-.company_inner02 .organization ul li {position: relative;;display: inline-block;width: 25%;font-size: 17px;text-align: center;vertical-align: top;}
+.company_inner02 .organization ul li {position: relative;;display: inline-block;width: 25%;font-size: 17px;text-align: center;vertical-align: top;opacity: 0;}
 .company_inner02 .organization ul li .team {
     display: inline-block;
     width: 180px;
@@ -81,7 +83,7 @@
     right:50%; 
     top:212px; 
     width:1px; 
-    height:80px; 
+    height:0px; 
     background:#2c2c2c;
 }
 .company_inner02 .organization .sub_line em {
@@ -93,6 +95,7 @@
     height:29px; 
     border: 1px solid #2c2c2c;
     border-radius: 30px;
+    opacity: 0;
 }
 .company_inner02 .organization .sub_line i {
     position:absolute; 
@@ -103,10 +106,16 @@
     height:6px; 
     background:#2099b6;
     border-radius: 6px;
+    opacity: 0;
 }
+.company_inner02 .organization .sub_line.active {height:80px; animation: org_sub_line_active 0.5s;animation-direction: alternate;}
+    @keyframes org_sub_line_active {
+        0%   {height: 0;}
+        100% {height: 80px;}
+    }
 
-.company_inner02 .organization ul.sub {padding-top: 120px;}
-.company_inner02 .organization ul.sub li {display: block;width: 100%;line-height: 30px;text-align: center;}
+.company_inner02 .organization ul.sub {padding-top: 150px;opacity: 0;}
+.company_inner02 .organization ul.sub li {display: block;width: 100%;line-height: 30px;text-align: center;opacity: 1;}
 
 
 .company_inner03 {}
@@ -159,6 +168,8 @@
 .company_inner03 .history_list .viewmore {display: inline-block;margin-left:50%;margin-bottom: 30px;}
 .company_inner03 .history_list .viewmore span {margin-left:-4px;color:#2099b6}
 
+.company_inner04 .client { padding:400px 0 100px 0;}
+.company_inner04 .client li { float:left; padding:30px 0; width:25%; text-align:center;}
 
  
 

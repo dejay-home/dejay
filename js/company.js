@@ -53,14 +53,18 @@ function scrollAction (){
     var company_inner02_H = $('.company_inner02').offset().top;
     var company_inner03_H = $('.company_inner03').offset().top;
     var company_inner04_H = $('.company_inner04').offset().top;
+    var organization_H = $('.organization').offset().top;
+    var organizationSub_H = $('.organization .sub').offset().top;
     var history1_H = $('.history1').offset().top;
     var history2_H = $('.history2').offset().top;
     var history3_H = $('.history3').offset().top;
     var history4_H = $('.history4').offset().top;
 
+
     $(window).on('scroll', function() {
 
         var actionScroll = $(this).scrollTop() + 400;
+        var organizationScroll = $(this).scrollTop() + 600;
         var historyScroll = $(this).scrollTop() + 800;
         
         if (company_inner01_H < actionScroll) {
@@ -75,6 +79,41 @@ function scrollAction (){
             setTimeout(function() { 
                 $('.company_inner02 .info').addClass('active'); 
             }, 300);
+
+            if (organization_H < organizationScroll) {
+                $('.ceo').animate({opacity: 1},300);
+                $('.line').delay(200).animate({opacity: 1},300); 
+                setTimeout(function() { 
+                    $('.team1').animate({'padding-top': '0px', opacity: 1},300); 
+                    $('.team2').delay(200).animate({'padding-top': '0px', opacity: 1},300); 
+                    $('.team3').delay(300).animate({'padding-top': '0px', opacity: 1},300); 
+                    $('.team4').delay(400).animate({'padding-top': '0px', opacity: 1},300); 
+                }, 700);
+            };
+            if (organizationSub_H < organizationScroll) {
+                $('.team1').find('.sub_line').addClass('active');
+                $('.team1').find('.sub_line i').delay(500).animate({opacity: 1},300);
+                $('.team1').find('.sub_line em').delay(700).animate({opacity: 1},300); 
+                $('.team1').find('.sub').delay(1200).animate({'padding-top': '120px', opacity: 1},500);  
+                setTimeout(function() { 
+                    $('.team2').find('.sub_line').addClass('active');
+                    $('.team2').find('.sub_line i').delay(500).animate({opacity: 1},300);
+                    $('.team2').find('.sub_line em').delay(700).animate({opacity: 1},300); 
+                    $('.team2').find('.sub').delay(1200).animate({'padding-top': '120px', opacity: 1},500);  
+                }, 500);
+                setTimeout(function() { 
+                    $('.team3').find('.sub_line').addClass('active');
+                    $('.team3').find('.sub_line i').delay(500).animate({opacity: 1},300);
+                    $('.team3').find('.sub_line em').delay(700).animate({opacity: 1},300); 
+                    $('.team3').find('.sub').delay(1200).animate({'padding-top': '120px', opacity: 1},500); 
+                }, 1000);
+                setTimeout(function() { 
+                    $('.team4').find('.sub_line').addClass('active');
+                    $('.team4').find('.sub_line i').delay(500).animate({opacity: 1},300);
+                    $('.team4').find('.sub_line em').delay(700).animate({opacity: 1},300); 
+                    $('.team4').find('.sub').delay(1200).animate({'padding-top': '120px', opacity: 1},500); 
+                }, 1500);
+            };
         };
 
         if (company_inner03_H < actionScroll) {
