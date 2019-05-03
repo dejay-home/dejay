@@ -136,7 +136,8 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         display: inline-block;
         font-size:18px;
     }
-    .gnb li a {opacity:0.9;}
+    .gnb li a {opacity:0.6;}
+    .gnb li.acitve a {opacity:1;}
 
     .language {
         font-family: 'NanumBarunGothic', 'NanumSquare', sans-serif;
