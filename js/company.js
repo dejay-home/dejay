@@ -54,7 +54,7 @@ function scrollAction (){
     var company_inner03_H = $('.company_inner03').offset().top;
     var company_inner04_H = $('.company_inner04').offset().top;
     var organization_H = $('.organization').offset().top;
-    var organizationSub_H = $('.organization .sub').offset().top;
+    var organizationSub_H = $('.organization .sub').offset().top -200;
     var history1_H = $('.history1').offset().top;
     var history2_H = $('.history2').offset().top;
     var history3_H = $('.history3').offset().top;
