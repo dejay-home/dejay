@@ -11,7 +11,9 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
 .fl { float:left; vertical-align:top;}
 .fr { float:right; vertical-align:top;}
 .s_title1 { position:relative; display:inline-block; padding-right:238px; font-size:15px; color:#fff; font-weight:bold; font-family: 'NanumBarunGothic', sans-serif;}
-.s_title1 .title_line { position:absolute; right:0; top:50%; margin-top:-1px; width:200px; height:2px; background:#2099b6;}
+.s_title1 .title_line { position:absolute; right:0; top:50%; margin-top:-1px; width:200px; height:2px; background:#2099b6; transform:scaleX(0); -webkit-transform:scaleX(0);  transform-origin:0 0; -webkit-transform-origin:0 0; transition: transform 1100ms ease-in-out; -webkit-transition: transform 1100ms ease-in-out;}
+.swiper-slide-active .s_title1 .title_line { transform:scaleX(1); -webkit-transform:scaleX(1); transition-delay:200ms; -webkit-transition-delay:200ms;}
+
 .title1 { line-height:114px; font-size:80px; color:#fff; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
 .next_page { padding:192px 0 136px; background: url(../img/common/container_bgLine3.png) repeat-y top center #1d1d1d;}
 .next_page .mauto { overflow:hidden;}

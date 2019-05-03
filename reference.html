@@ -8,14 +8,15 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/reference.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/html5shiv.js"></script><!-- IE 8 이하에서 HTML5 태그 지원 -->
 	<script language="javascript" type="text/javascript" src="js/default.js"></script>
 	<script language="javascript" type="text/javascript" src="js/reference.js"></script>
+	<script language="javascript" type="text/javascript" src="js/swiper.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/isotope.pkgd.js"></script>
-	<script language="javascript" type="text/javascript" src="js/swiper.js"></script>
-	<script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 </head>
 <body>
 	<span style="position: fixed;bottom:0;z-index: 999;"><span class="this_scroll"></span>, <span class="last_scroll"></span></span>
@@ -153,36 +154,74 @@
 			</div>
 		</div>		
 	</div>
-	<div class="dim-layer">
-		<div class="dimBg"></div>
-		<div id="detail" class="pop-layer">
-			<div class="pop-container">
-				<div class="swiper-container slide">
+	<div class="reference_detail">
+		<div class="dim"></div>
+		<div id="detail" class="detail_area">
+			<div class="pop-conts">
+				<div class="swiper-container slide3">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide area1">
 							<div class="bg"></div>
+							adsfasdf
 						</div>
 						<div class="swiper-slide area2">
+							<div class="bg"></div>
+						</div>
+						<div class="swiper-slide area3">
 							<div class="bg"></div>
 						</div>
 					</div>
 					<div class="pag"></div>
 				</div>
-				<div class="pop-conts">	
-					asdasd
-					<div class="btn-r">
-						<a href="#" class="btn-layerClose">Close</a>
-					</div>
-				</div>
-				<script>
-					var swiper5 = new Swiper('.dim-layer .slide', {
+				<script type="text/javascript">
+					var swiper = new Swiper('.slide3', {
 						pagination: {
-							el: '.dim-layer .slide .pag',
+							el: '.slide3 .pag',
+							clickable: true,
 						},
+						loop:true,
 					});
 				</script>
 			</div>
+			<div class="pop-conts type2">	
+				<div class="box">
+					<div class="scr">
+						<h3 class="detail_title">KT Y 데이터박스</h3>
+						<a href="#a" class="btn_view">REFERENCE VIEW ></a>
+						<div class="project">
+							<span>프로젝트</span>
+							<p class="subtxt">다수의 사람들에게 데이터를 보낼 수 있는 데이턱 기능구현. 다수의 사람들에게 데이터를 보낼 수 있는 데이턱 기능구현.</p>
+							<dl>
+							<dt>고객사</dt>
+							<dd class="data_clientname">KT</dd>
+							<dt>구축기간</dt>
+							<dd class="data_buildtime">2018-05-15 ~ 2018-07-31</dd>
+							<dt>서비스 구분</dt>
+							<dd class="data_service">Mobile APP</dd>
+							<dt>업종구분</dt>
+							<dd class="data_type">통신</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-r">
+				<a href="#" class="btn-layerClose">Close</a>
+			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		(function($){
+			$(window).on("load",function(){
+				$(".pop-conts.type2 .box").mCustomScrollbar({
+					 theme:"rounded",
+					mouseWheel:{ 
+						scrollAmount: "auto", 
+					},
+				});
+				
+			});
+		})(jQuery);
+	</script>
 </body>
 </html>
