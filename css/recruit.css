@@ -1,5 +1,81 @@
 @charset "utf-8";
+.scroll2 { position: absolute; left:50%; width:1358px; bottom:0; z-index:20; transform: translate(-50%,0); -webkit-transform: translate(-50%,0);}
+.scroll2 a { position: absolute; bottom: 60px; left:0; display: block; z-index: 200; transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out; -webkit-transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out; transform: none; height: 72px; width: 28px; margin-left: -14px; cursor: pointer;}
+.scroll2 a:after { position: absolute; display: block; width:60px; left:26px; bottom:-16px; content: 'SCROLL'; text-align:center; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: bold; color:rgba(255,255,255,0.8); line-height:normal; font-size:15px; transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform-origin: 0 0; -webkit-transform-origin: 0 0;}
+.scroll2 a:before { position: absolute; content: ""; display:block; left:0; bottom:0; width:17px; height:66px; background:url(../img/common/ico_scrolldown.png) no-repeat center; animation: scroll-arrow 4000ms infinite; -webkit-animation: scroll-arrow 4000ms infinite;}
+
+.visual_area .title2.re { color:#fff;}
+.visual_area .mauto { background:none;}
+#nav_recruit { width:1358px; margin:0 auto;}
+#nav_recruit li { float: left; width:50%;}
+#nav_recruit li a { display:block; height:98px; line-height:98px; background:rgba(255,255,255,0.06); text-align:center; font-size:30px; color:#fff; transition: 0.3s; -webkit-transition: 0.3s; outline:0;}
+#nav_recruit li.ui-state-active a { background:#fff; font-weight:bold; color:#282828;}
+.section.recruit_inner01 { height:1300px;}
+.section.recruit_inner01 .titlebox2 { top:236px;}
+.section.recruit_inner01 .talent { position:relative; top:600px; font-size:0;}
+.section.recruit_inner01 .talent .content { position:relative; display:inline-block; text-align:center; vertical-align:top;}
+.section.recruit_inner01 .talent .content h4 { line-height:30px; font-size:20px; font-weight:normal; color:#fff;}
+.section.recruit_inner01 .talent .content .team { padding:28px 0 0;}
+.section.recruit_inner01 .talent .content .sub_line { position:absolute; right:50%; top:270px; width:1px; height:0px; background:#2c2c2c;}
+.section.recruit_inner01 .talent .content .sub_line em { position:absolute;  left:50%; bottom:0; margin:0 0 -15px -15px; width:29px; height:29px; border: 1px solid #2c2c2c;border-radius: 30px; opacity: 0;}
+.section.recruit_inner01 .talent .content .sub_line i {position:absolute; left:50%; bottom:0; margin:0 0 -3px -3px;width:6px; height:6px; background:#2099b6;border-radius: 6px; opacity: 0;}
+.section.recruit_inner01 .talent .content .sub_line.active { height:80px; animation: org_sub_line_active 0.5s alternate; -webkit-animation: org_sub_line_active 0.5s alternate;}
+.section.recruit_inner01 .talent .content .txt { padding-top:112px; line-height:30px; font-size:17px; color:rgba(255,255,255,0.5);}
+
+.section.recruit_inner01 .talent .line { display:inline-block; width:212px; vertical-align:top;}
 
 
- 
 
+
+
+
+
+
+@keyframes scroll-arrow {
+    0%, 40%, 50%, 60%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    45% {
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    }
+    55% {
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    }
+}
+@-webkit-keyframes scroll-arrow {
+    0%, 40%, 50%, 60%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    45% {
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    }
+    55% {
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    }
+}
+@keyframes org_sub_line_active {
+    0%   {height: 0;}
+    100% {height: 80px;}
+}
+@-webkit-keyframes org_sub_line_active {
+    0%   {height: 0;}
+    100% {height: 80px;}
+}
