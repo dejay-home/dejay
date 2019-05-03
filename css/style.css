@@ -179,6 +179,7 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         height: 29px;
         border-bottom: 1px solid #1e7f96;
         color:#1e7f96;
+        opacity:1;
     }
     .btn_top {
         display: none;
