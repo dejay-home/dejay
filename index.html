@@ -9,13 +9,43 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/html5shiv.js"></script><!-- IE 8 이하에서 HTML5 태그 지원 -->
 	<script language="javascript" type="text/javascript" src="js/default.js"></script>
 	<script language="javascript" type="text/javascript" src="js/main.js"></script>
-	<script language="javascript" type="text/javascript" src="js/swiper.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/swiper.js"></script>
+	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/footer-reveal.js"></script>
+	<script language="javascript" type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script language="javascript" type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery.counterup.min.js"></script>
 </head>
 <body>
+<script type="text/javascript">
+function textAni(){
+	$('.ml16').each(function(){
+		$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+	});
+
+	anime.timeline({loop: false})
+	.add({
+		targets: '.ml16 .letter',
+		translateY: [-100,0],
+		easing: "easeOutExpo",
+		duration: 1400,
+		delay: function(el, i) {
+			return 30 * i;
+		}
+	}).add({
+		targets: '.ml16',
+		opacity: 1,
+		duration: 1000,
+		easing: "easeOutExpo",
+		delay: 1000,
+	});
+};
+</script>
 	<span style="position: fixed;bottom:0;"><span class="this_scroll"></span>, <span class="last_scroll"></span></span>
 
 	<div id="wrap">
@@ -54,7 +84,8 @@
 											DEJAY NETWORK CONSULTING GROUP
 											<span class="title_line"></span>
 										</h3>
-										<div class="title1">TOTAL QUALITY CONTROL <br>FOR BUSINESS</div>
+										<div class="title1">TOTAL QUALITY</div>
+										<div class="title1">CONTROL FOR BUSINESS</div>
 									</div>
 								</div>
 							</div>
@@ -67,7 +98,8 @@
 											DEJAY NETWORK CONSULTING GROUP
 											<span class="title_line"></span>
 										</h3>
-										<div class="title1">FLAWLESS TECHNIQUE <br>FOR PROJECT</div>
+										<div class="title1">FLAWLESS TECHNIQUE</div>
+										<div class="title1">FOR PROJECT</div>
 									</div>
 								</div>
 							</div>
@@ -80,7 +112,8 @@
 											DEJAY NETWORK CONSULTING GROUP
 											<span class="title_line"></span>
 										</h3>
-										<div class="title1">REVOLUTIONARY IDEA <br>FOR SUCCESS</div>
+										<div class="title1">REVOLUTIONARY IDEA</div>
+										<div class="title1">FOR SUCCESS</div>
 									</div>
 								</div>
 							</div>
@@ -88,21 +121,36 @@
 						<div class="pag"></div>
 					</div>
 					<script>
-					var swiper = new Swiper('.slide1', {
-						fade: { crossFade: true },
-						virtualTranslate: true,
-						speed:2000,
-						effect: 'fade',
-						pagination: {
-							el: '.slide1 .pag',
-							clickable: true,
-						},
-						// autoplay: {
-						// 	delay: 5000,
-						// 	disableOnInteraction: false,
-					  	// },
-						loop:true,
-					});
+						$(document).ready(function(){
+							var swiper = new Swiper('.slide1', {
+								fade: { crossFade: true },
+								virtualTranslate: true,
+								speed:2000,
+								effect: 'fade',
+								pagination: {
+									el: '.slide1 .pag',
+									clickable: true,
+								},
+								autoplay: {
+									delay: 5000,
+									disableOnInteraction: false,
+								},
+								loop:true,
+								on: {
+									slideChangeTransitionStart: function(){
+										//this.activeIndex.find('.title1').removeClass('m16');
+										setTimeout(function(){
+											$('.main_visual').addClass('active');
+										}, 300);
+										setTimeout(function(){
+											$('.slide1 .swiper-slide-active .title1').addClass('ml16');
+											$('.slide1 .swiper-slide-prev .title1, .slide1 .swiper-slide-next .title1').removeClass('ml16');
+											textAni();
+										}, 1400);
+									},
+								},
+							});
+						});
 					</script>
 				</div>
 				<div id="whattodo" class="section main_inner01">
@@ -148,75 +196,77 @@
 					</div>
 				</div>
 				<div id="whatweus" class="section main_inner02 clear">
-					<div class="titlebox">
-						<h3 class="title1">WHAT <br>WE US</h3>
-						<ul id="counter">
-						<li>
-							<span>15</span>
-							<div>YEAR</div>
-						</li>
-						<li>
-							<span>40</span>
-							<div>CLIENTS</div>
-						</li>
-						<li>
-							<span>20</span>
-							<div>SPECIALIST</div>
-						</li>
-						<li>
-							<span>500</span>
-							<div>PROJECTS</div>
-						</li>
-						</ul>
+					<div class="mauto">
+						<div class="titlebox">
+							<h3 class="title1">WHAT <br>WE US</h3>
+							<ul id="counter">
+							<li>
+								<span id="counter1">15</span>
+								<div>YEAR</div>
+							</li>
+							<li>
+								<span id="counter2">40</span>
+								<div>CLIENTS</div>
+							</li>
+							<li>
+								<span id="counter3">20</span>
+								<div>SPECIALIST</div>
+							</li>
+							<li>
+								<span id="counter4">500</span>
+								<div>PROJECTS</div>
+							</li>
+							</ul>
+						</div>
 					</div>
-					<div class="client clear">
+					<div id="parall" class="client clear" data-type="background" data-speed="10">
 						<ul class="clear">
-						<li>
+						<li data-aos="fade-up" data-aos-delay="300">
 							<img src="img/logo/logo_lg.png" alt="LG전자">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="400">
 							<img src="img/logo/logo_hyundai.png" alt="현대자동차">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="500">
 							<img src="img/logo/logo_samsung.png" alt="삼성전자">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="600">
 							<img src="img/logo/logo_ollehkt.png" alt="올레 케이티">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="700">
 							<img src="img/logo/logo_incheonair.png" alt="인천국제공항">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="800">
 							<img src="img/logo/logo_imbc.png" alt="iMBC캠퍼스">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="900">
 							<img src="img/logo/logo_samsung_hos.png" alt="삼성서울병원">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1000">
 							<img src="img/logo/logo_skplanet.png" alt="SK 플래닛">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1100">
 							<img src="img/logo/logo_hanamstar.png" alt="하남스타필드">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1200">
 							<img src="img/logo/logo_seoulcyber.png" alt="서울사이버대학교">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1300">
 							<img src="img/logo/logo_sookmyung.png" alt="숙명여자대학교">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1400">
 							<img src="img/logo/logo_pantech.png" alt="팬텍">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1500">
 							<img src="img/logo/logo_kbs.png" alt="KBS">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1600">
 							<img src="img/logo/logo_bnkcap.png" alt="BNK캐피탈">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1700">
 							<img src="img/logo/logo_jejuair.png" alt="제주항공">
 						</li>
-						<li>
+						<li data-aos="fade-up" data-aos-delay="1800">
 							<img src="img/logo/logo_gtelp.png" alt="지텔프코리아">
 						</li>
 						</ul>
@@ -235,6 +285,9 @@
 						<li><a href="#a" class="solution">SOLUTION</a></li>
 						<li><a href="#a" class="iot">IOT</a></li>
 						</ul>
+						<a href="reference.html" class="viewmore">VIEW MORE</a>
+					</div>
+					<div class="mauto non">
 						<div class="portwrap">
 							<a href="#a" class="btn s2btn_next">다음</a>
 							<a href="#a" class="btn s2btn_prev">이전</a>
@@ -382,7 +435,6 @@
 							});
 							</script>
 						</div>
-						<a href="reference.html" class="viewmore">VIEW MORE</a>
 					</div>
 				</div>
 				<div class="rnb">
@@ -403,35 +455,35 @@
 					<a href="#a" class="next_title2"><strong>C</strong>OMPANY</a>
 				</div>
 			</div>
-			<div id="footer">
-				<div class="mauto clear">
-					<div class="fl">
-						<a href="index.html" class="dejay_logo">
-							<span class="hide">DEJAY</span>
-						</a>
-						<ul class="foot_snb">
-						<li><a href="company.html">COMPANY</a></li>
-						<li><a href="business.html">BUSINESS</a></li>
-						<li><a href="reference.html">REFERENCE</a></li>
-						<li><a href="recruit.html">RECRUIT</a></li>
-						<li><a href="contactus.html">CONTACTUS</a></li>
-						</ul>
-					</div>
-					<div class="fr">
-						<ul class="term1 clear">
-						<li><a href="#a">이용약관</a></li>
-						<li><a href="#a">개인정보처리방침</a></li>
-						<li><a href="#a">오시는 길</a></li>
-						</ul>
-						<ul class="term2 clear" style="font-size:0;">
-						<li>(주)드제이</li>
-						<li>서울특별시 마포구 서교동 395-151 2층</li>
-						<li>02-2266-4433</li>
-						<li>대표이사 이용훈</li>
-						<li>사업자등록번호 261-81-20556</li>
-						</ul>
-						<p class="copy">Copyright ⓒ 2019 DEJAY.All rights reserved</p>
-					</div>
+		</div>
+		<div id="footer">
+			<div class="mauto clear">
+				<div class="fl">
+					<a href="index.html" class="dejay_logo">
+						<span class="hide">DEJAY</span>
+					</a>
+					<ul class="foot_snb">
+					<li><a href="company.html">COMPANY</a></li>
+					<li><a href="business.html">BUSINESS</a></li>
+					<li><a href="reference.html">REFERENCE</a></li>
+					<li><a href="recruit.html">RECRUIT</a></li>
+					<li><a href="contactus.html">CONTACTUS</a></li>
+					</ul>
+				</div>
+				<div class="fr">
+					<ul class="term1 clear">
+					<li><a href="#a">이용약관</a></li>
+					<li><a href="#a">개인정보처리방침</a></li>
+					<li><a href="#a">오시는 길</a></li>
+					</ul>
+					<ul class="term2 clear" style="font-size:0;">
+					<li>(주)드제이</li>
+					<li>서울특별시 마포구 서교동 395-151 2층</li>
+					<li>02-2266-4433</li>
+					<li>대표이사 이용훈</li>
+					<li>사업자등록번호 261-81-20556</li>
+					</ul>
+					<p class="copy">Copyright ⓒ 2019 DEJAY.All rights reserved</p>
 				</div>
 			</div>
 		</div>		

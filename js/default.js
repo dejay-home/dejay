@@ -1,5 +1,11 @@
+function Load() {
+	var body = document.getElementsByTagName('body')[0];
+	body.className += ' load';
+}
+window.onload = Load;
+
 $(document).ready(function(){  
-  
+  $('#footer').footerReveal();
   var delta = false, // 중복방지용
       thisScroll,
       lastScroll = 0;
