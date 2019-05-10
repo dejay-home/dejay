@@ -3,7 +3,6 @@ function Load() {
 	body.className += ' load';
 }
 window.onload = Load;
-
 $(document).ready(function(){  
   $('#footer').footerReveal();
   var delta = false, // 중복방지용
