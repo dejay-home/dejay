@@ -2,9 +2,14 @@
 
 .visual_area {background: url('../img/business/bg_visual1.png') no-repeat center;}
 .visual_area .title2 { position: relative;}
-.visual_area .title2 span { position:absolute; left:170px; top:30px; font-size:35px; color:rgba(255,255,255,0.9); letter-spacing: -0.025em;}
-
+.visual_area .tit3c { position:absolute; left:170px; top:100px; font-size:35px; color:rgba(255,255,255,0.9); letter-spacing: -0.025em; transition:1000ms; -webkit-transition:1000ms; opacity:0; transform:translateY(50%); -webkit-transform:translateY(50%);}
+.visual_area.active .tit3c { opacity:1; transform:translateY(0%); -webkit-transform:translateY(0%);}
+.m13 .letter { display:inline-block;}
 .inner_img { overflow: hidden; position: absolute; top:360px; width:50%; height:588px; background:no-repeat center;}
+.section .titlebox2,
+.section .inner_img { opacity:0; transform:translateY(50%); -webkit-transform:translateY(50%); transition:.9s cubic-bezier(0,.21,.03,1.01); -webkit-transition:.9s cubic-bezier(0,.21,.03,1.01);}
+.section.scrolled .titlebox2,
+.section.scrolled .inner_img { opacity:1; transform:translateY(0%); -webkit-transform:translateY(0%);}
 .business_inner01 { height:1080px;}
 .business_inner01 .inner_img {
     right:0;

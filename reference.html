@@ -11,12 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script type="text/javascript" src="js/html5shiv.js"></script><!-- IE 8 이하에서 HTML5 태그 지원 -->
 	<script language="javascript" type="text/javascript" src="js/default.js"></script>
 	<script language="javascript" type="text/javascript" src="js/reference.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/isotope.pkgd.js"></script>
 	<script language="javascript" type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/footer-reveal.js"></script>
 </head>
 <body>
 	
@@ -24,6 +26,7 @@
 	<div id="wrap">
 		<h1 class="hide">드제이 홈페이지에 오시것을 환영합니다.</h1>
 		<div id="container">
+			<div class="scroll"><a href="#a"><span class='hide'>아래로</span></a></div>
 			<div id="header">
 				<a href="index.html" class="dejay_logo">
 					<span class="hide">DEJAY</span>
@@ -32,7 +35,7 @@
 					<ul>
 						<li><a href="company.html">COMPANY</a></li>
 						<li><a href="business.html">BUSINESS</a></li>
-						<li><a href="reference.html">REFERENCE</a></li>
+						<li class="acitve"><a href="reference.html">REFERENCE</a></li>
 						<li><a href="recruit.html">RECRUIT</a></li>
 						<li><a href="contactus.html">CONTACTUS</a></li>
 					</ul>
@@ -50,7 +53,8 @@
 								REFERENCE
 								<span class="title_line"></span>
 							</h3>
-							<div class="title2">PERFORMANCE<br>DOCUMENT</div>
+							<div class="title2 ml3">PERFORMANCE</div>
+							<div class="title2 ml3">DOCUMENT</div>
 						</div>
 					</div>
 				</div>
@@ -115,42 +119,44 @@
 			</div>
 			<div class="next_page">
 				<div class="mauto">
-					<div class="next_title1">
-						<span>NEXT</span>
-						사람이 경쟁력인 기업 (주) 드제이
+					<div class="scrolledbox">
+						<h2 class="next_title1">
+							<span>NEXT</span>
+							주식회사 드제이를 소개합니다.
+						</h2>
+						<a href="#a" class="next_title2"><strong>C</strong>OMPANY</a>
 					</div>
-					<a href="#a" class="next_title2"><strong>R</strong>ECRUIT</a>
 				</div>
-			</div>
-			<div id="footer">
-				<div class="mauto clear">
-					<div class="fl">
-						<a href="index.html" class="dejay_logo">
-							<span class="hide">DEJAY</span>
-						</a>
-						<ul class="foot_snb">
-						<li><a href="company.html">COMPANY</a></li>
-						<li><a href="business.html">BUSINESS</a></li>
-						<li><a href="reference.html">REFERENCE</a></li>
-						<li><a href="recruit.html">RECRUIT</a></li>
-						<li><a href="contactus.html">CONTACTUS</a></li>
-						</ul>
-					</div>
-					<div class="fr">
-						<ul class="term1 clear">
-						<li><a href="#a">이용약관</a></li>
-						<li><a href="#a">개인정보처리방침</a></li>
-						<li><a href="#a">오시는 길</a></li>
-						</ul>
-						<ul class="term2 clear" style="font-size:0;">
-						<li>(주)드제이</li>
-						<li>서울특별시 마포구 서교동 395-151 2층</li>
-						<li>02-2266-4433</li>
-						<li>대표이사 이용훈</li>
-						<li>사업자등록번호 261-81-20556</li>
-						</ul>
-						<p class="copy">Copyright ⓒ 2019 DEJAY.All rights reserved</p>
-					</div>
+			</div>		
+		</div>
+		<div id="footer">
+			<div class="mauto clear">
+				<div class="fl">
+					<a href="index.html" class="dejay_logo">
+						<span class="hide">DEJAY</span>
+					</a>
+					<ul class="foot_snb">
+					<li><a href="company.html">COMPANY</a></li>
+					<li><a href="business.html">BUSINESS</a></li>
+					<li><a href="reference.html">REFERENCE</a></li>
+					<li><a href="recruit.html">RECRUIT</a></li>
+					<li><a href="contactus.html">CONTACTUS</a></li>
+					</ul>
+				</div>
+				<div class="fr">
+					<ul class="term1 clear">
+					<li><a href="#a">이용약관</a></li>
+					<li><a href="#a">개인정보처리방침</a></li>
+					<li><a href="#a">오시는 길</a></li>
+					</ul>
+					<ul class="term2 clear" style="font-size:0;">
+					<li>(주)드제이</li>
+					<li>서울특별시 마포구 서교동 395-151 2층</li>
+					<li>02-2266-4433</li>
+					<li>대표이사 이용훈</li>
+					<li>사업자등록번호 261-81-20556</li>
+					</ul>
+					<p class="copy">Copyright ⓒ 2019 DEJAY.All rights reserved</p>
 				</div>
 			</div>
 		</div>		
@@ -163,7 +169,6 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide area1">
 							<div class="bg"></div>
-							adsfasdf
 						</div>
 						<div class="swiper-slide area2">
 							<div class="bg"></div>
@@ -188,7 +193,7 @@
 				<div class="box">
 					<div class="scr">
 						<h3 class="detail_title">KT Y 데이터박스</h3>
-						<a href="#a" class="btn_view">REFERENCE VIEW ></a>
+						<a href="reference.html" class="btn_view">REFERENCE VIEW ></a>
 						<div class="project">
 							<span>프로젝트</span>
 							<p class="subtxt">다수의 사람들에게 데이터를 보낼 수 있는 데이턱 기능구현. 다수의 사람들에게 데이터를 보낼 수 있는 데이턱 기능구현.</p>

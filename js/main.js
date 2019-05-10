@@ -23,7 +23,7 @@ $(document).ready(function(){
 		var BodyTop = $(this).scrollTop();
 		var section1 = $('#whattodo').offset().top - 200;
 		var section2 = $('#whatweus').offset().top - 200;
-		var section3 = $('#portfolio').offset().top;
+		var section3 = $('#portfolio').offset().top - 200;
 		var sortbox = $('.main_inner01 .mauto').offset().top;
 
 		if ( BodyTop >= sortbox ) {
@@ -62,6 +62,33 @@ $(document).ready(function(){
 			$bgobj.css({ backgroundPosition: coords });
 		});
 	});
+
+	$('.reference_detail').hide();
+    $('.slide2 .list').click(function(){
+        var $href = $(this).attr('href');
+        layer_popup($href);
+		//$('.detail_area, .reference_detail').fadeIn();
+		$('body').addClass('active');
+    });
+    function layer_popup(el){
+
+        var $el = $(el);
+        var isDim = $el.prev().hasClass('dim');
+
+        isDim ? $('.reference_detail').fadeIn().addClass('on') : $el.fadeIn();
+        $el.find('a.btn-layerClose').click(function(){
+			$('body').removeClass('active');
+            isDim ? $('.reference_detail').fadeOut() : $el.fadeOut();
+            return false;
+        });
+
+        $('.reference_detail .dim').click(function(){
+			$('.reference_detail').fadeOut();
+			$('body').removeClass('active');
+            return false;
+        });
+
+    }
 });
 
 function sectionClick(){

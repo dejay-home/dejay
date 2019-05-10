@@ -10,20 +10,24 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
 .mauto { position:relative; margin:0 auto; width:1358px;}
 .fl { float:left; vertical-align:top;}
 .fr { float:right; vertical-align:top;}
-.s_title1 { position:relative; display:inline-block; padding-right:238px; font-size:15px; color:#fff; font-weight:bold; font-family: 'NanumBarunGothic', sans-serif;}
+.s_title1 { position:relative; display:inline-block; padding-right:238px; font-size:15px; color:#fff; font-weight:bold; font-family: 'NanumBarunGothic', sans-serif; opacity:0;; transition:1000ms ease-in-out; -webkit-transition:1000ms ease-in-out;}
 .s_title1 .title_line { position:absolute; right:0; top:50%; margin-top:-1px; width:200px; height:2px; background:#2099b6; transform:scaleX(0); -webkit-transform:scaleX(0);  transform-origin:0 0; -webkit-transform-origin:0 0; transition: transform 1100ms ease-in-out; -webkit-transition: transform 1100ms ease-in-out;}
+.visual_area.active .s_title1 { opacity:1;}
 .visual_area.active .s_title1 .title_line { transform:scaleX(1); -webkit-transform:scaleX(1); transition-delay:200ms; -webkit-transition-delay:200ms;}
 
 .title1 { line-height:114px; font-size:80px; color:#fff; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
 .next_page { padding:192px 0 136px; background: url(../img/common/container_bgLine3.png) repeat-y top center #1d1d1d;}
 .next_page .mauto { overflow:hidden;}
-.next_title1 { display:inline-block; padding-bottom:76px; line-height:28px; font-size:18px; color:#fff; font-family: 'NanumSquare', sans-serif;}
+.next_page .scrolledbox { transition:0.9s cubic-bezier(0,.21,.03,1.01); -webkit-transition:0.9s cubic-bezier(0,.21,.03,1.01); transform:translateX(-100%); -webkit-transform:translateX(-100%);}
+.next_page.scrolled .scrolledbox {transform:translateX(0%); -webkit-transform:translateX(0%);}
+.next_title1 { display:block; padding-bottom:76px; line-height:28px; font-size:18px; color:#fff; font-family: 'NanumSquare', sans-serif;}
 .next_title1 span { position:relative; display:inline-block; margin:0 30px 0 3px; padding-right:16px; font-weight:bold; vertical-align:top;}
 .next_title1 span:after { content:""; position:absolute; right:0; top:9px; width:11px; height:13px; background:url(../img/common/ico_next.png) no-repeat center;}
-.next_title2 { display: block;margin-left:-24px; font-size:80px; color:#2c2c2c; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif;}
+.next_title2 { display:inline-block; margin-left:-24px; font-size:80px; color:#2c2c2c; font-weight:bold; letter-spacing:-0.04em; font-family: 'NanumSquare', sans-serif; transition:0.9s cubic-bezier(0,.21,.03,1.01); -webkit-transition:0.9s cubic-bezier(0,.21,.03,1.01);}
+.next_page .next_title2:hover { margin:0; color:#2099b6;}
 .next_title2 strong { color:#2099b6;}
 
-.scroll { position: absolute; left:50%; width:1358px; bottom:0; z-index:20; transform: translate(-50%,0); -webkit-transform: translate(-50%,0);}
+.scroll { position: fixed; left:50%; width:1358px; bottom:0; z-index:20; transform: translate(-50%,0); -webkit-transform: translate(-50%,0);}
 .scroll a { position: absolute; bottom: 60px; right:-10px; display: block; z-index: 200; transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out; -webkit-transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out; transform: none; height: 72px; width: 28px; margin-left: -14px; cursor: pointer;}
 .scroll a:after { position: absolute; display: block; width:60px; left:26px; bottom:-16px; content: 'SCROLL'; text-align:center; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: bold; color:rgba(255,255,255,0.8); line-height:normal; font-size:15px; transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform-origin: 0 0; -webkit-transform-origin: 0 0;}
 .scroll a:before { position: absolute; content: ""; display:block; left:0; bottom:0; width:17px; height:66px; background:url(../img/common/ico_scrolldown.png) no-repeat center; animation: scroll-arrow 4000ms infinite; -webkit-animation: scroll-arrow 4000ms infinite;}
@@ -187,7 +191,6 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         opacity:1;
     }
     .btn_top {
-        display: none;
         position: fixed;
         right:105px;
         bottom:100px;
@@ -197,6 +200,10 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         text-align: center;
         border-radius: 100px;
         background-color: #313131;
+        opacity:0;
+        pointer-events: none;
+        transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out;
+        -webkit-transition: transform 600ms cubic-bezier(.65,.06,.19,.96), opacity 800ms ease-in-out;
     }
 
     .visual_area .mauto {height:100%;background: url("../img/common/container_bgLine3.png") repeat-y top center}
@@ -224,9 +231,9 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
             0%   {height: 0%;opacity: 0;}
             100% {height: 100%;opacity: 1;}
         }
-    .section .titlebox2 .title3 { position: relative;top:50px;opacity: 0;font-size:44px; color:#fff; font-weight:bold; letter-spacing:-0.02em; font-family: 'NanumSquare', sans-serif;}
-    .section .titlebox2 .info { margin-top:90px;opacity: 0;line-height:45px;}
-    .section.active .titlebox2 .title3 {top:0px;opacity: 1;animation: sub_title_active 1s;animation-direction: alternate;}
+    .section .titlebox2 .title3 { position: relative;top:0; font-size:44px; color:#fff; font-weight:bold; letter-spacing:-0.02em; font-family: 'NanumSquare', sans-serif;}
+    .section .titlebox2 .info { margin-top:40px; line-height:45px;}
+    /* .section.active .titlebox2 .title3 {top:0px;opacity: 1;animation: sub_title_active 1s;animation-direction: alternate;}
         @keyframes sub_title_active {
             0%   {top: 50px;opacity: 0;}
             100% {top: 0;opacity: 1;}
@@ -235,7 +242,7 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
         @keyframes sub_info_active {
             0%   {margin-top: 90px;}
             100% {margin-top: 40px;}
-        }
+        } */
 
 #footer { position:fixed; left:0; padding:135px 0 63px; width:100%; height:518px; background:#151515; box-sizing:border-box;}
 	#footer .dejay_logo {

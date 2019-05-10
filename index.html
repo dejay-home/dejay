@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/html5shiv.js"></script><!-- IE 8 이하에서 HTML5 태그 지원 -->
 	<script language="javascript" type="text/javascript" src="js/default.js"></script>
@@ -17,6 +18,7 @@
 	<script language="javascript" type="text/javascript" src="js/swiper.js"></script>
 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/footer-reveal.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script language="javascript" type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script language="javascript" type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/jquery.counterup.min.js"></script>
@@ -39,7 +41,7 @@ function textAni(){
 		}
 	}).add({
 		targets: '.ml16',
-		opacity: 1,
+		//opacity: 1,
 		duration: 1000,
 		easing: "easeOutExpo",
 		delay: 1000,
@@ -219,54 +221,55 @@ function textAni(){
 							</ul>
 						</div>
 					</div>
-					<div id="parall" class="client clear" data-type="background" data-speed="10">
+					<!-- <div id="parall" class="client clear" data-type="background" data-speed="10"> -->
+					<div id="parall" class="client clear">
 						<ul class="clear">
-						<li data-aos="fade-up" data-aos-delay="300">
+						<li data-aos="fade-up" data-aos-delay="100">
 							<img src="img/logo/logo_lg.png" alt="LG전자">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="400">
+						<li data-aos="fade-up" data-aos-delay="150">
 							<img src="img/logo/logo_hyundai.png" alt="현대자동차">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="500">
+						<li data-aos="fade-up" data-aos-delay="200">
 							<img src="img/logo/logo_samsung.png" alt="삼성전자">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="600">
+						<li data-aos="fade-up" data-aos-delay="250">
 							<img src="img/logo/logo_ollehkt.png" alt="올레 케이티">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="700">
+						<li data-aos="fade-up" data-aos-delay="300">
 							<img src="img/logo/logo_incheonair.png" alt="인천국제공항">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="800">
+						<li data-aos="fade-up" data-aos-delay="350">
 							<img src="img/logo/logo_imbc.png" alt="iMBC캠퍼스">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="900">
+						<li data-aos="fade-up" data-aos-delay="400">
 							<img src="img/logo/logo_samsung_hos.png" alt="삼성서울병원">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1000">
+						<li data-aos="fade-up" data-aos-delay="450">
 							<img src="img/logo/logo_skplanet.png" alt="SK 플래닛">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1100">
+						<li data-aos="fade-up" data-aos-delay="500">
 							<img src="img/logo/logo_hanamstar.png" alt="하남스타필드">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1200">
+						<li data-aos="fade-up" data-aos-delay="550">
 							<img src="img/logo/logo_seoulcyber.png" alt="서울사이버대학교">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1300">
+						<li data-aos="fade-up" data-aos-delay="600">
 							<img src="img/logo/logo_sookmyung.png" alt="숙명여자대학교">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1400">
+						<li data-aos="fade-up" data-aos-delay="650">
 							<img src="img/logo/logo_pantech.png" alt="팬텍">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1500">
+						<li data-aos="fade-up" data-aos-delay="700">
 							<img src="img/logo/logo_kbs.png" alt="KBS">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1600">
+						<li data-aos="fade-up" data-aos-delay="750">
 							<img src="img/logo/logo_bnkcap.png" alt="BNK캐피탈">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1700">
+						<li data-aos="fade-up" data-aos-delay="800">
 							<img src="img/logo/logo_jejuair.png" alt="제주항공">
 						</li>
-						<li data-aos="fade-up" data-aos-delay="1800">
+						<li data-aos="fade-up" data-aos-delay="850">
 							<img src="img/logo/logo_gtelp.png" alt="지텔프코리아">
 						</li>
 						</ul>
@@ -294,7 +297,7 @@ function textAni(){
 							<div class="swiper-container slide2">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" data-filter="app">
-										<a href="#a" class="list">
+										<a href="#detail" class="list">
 											<p><img src="img/reference/reference1.png" alt="">
 											<div>
 												<h3>app1</h3>
@@ -448,11 +451,13 @@ function textAni(){
 			</div>
 			<div class="next_page">
 				<div class="mauto">
-					<h2 class="next_title1">
-						<span>NEXT</span>
-						주식회사 드제이를 소개합니다.
-					</h2>
-					<a href="#a" class="next_title2"><strong>C</strong>OMPANY</a>
+					<div class="scrolledbox">
+						<h2 class="next_title1">
+							<span>NEXT</span>
+							주식회사 드제이를 소개합니다.
+						</h2>
+						<a href="#a" class="next_title2"><strong>C</strong>OMPANY</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -488,5 +493,71 @@ function textAni(){
 			</div>
 		</div>		
 	</div>
+	<div class="reference_detail">
+		<div class="dim"></div>
+		<div id="detail" class="detail_area">
+			<div class="pop-conts">
+				<div class="swiper-container slide3">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide area1">
+							<div class="bg"></div>
+						</div>
+						<div class="swiper-slide area2">
+							<div class="bg"></div>
+						</div>
+						<div class="swiper-slide area3">
+							<div class="bg"></div>
+						</div>
+					</div>
+					<div class="pag"></div>
+				</div>
+				<script type="text/javascript">
+					var swiper = new Swiper('.slide3', {
+						pagination: {
+							el: '.slide3 .pag',
+							clickable: true,
+						},
+						loop:true,
+					});
+				</script>
+			</div>
+			<div class="pop-conts type2">	
+				<div class="box">
+					<div class="scr">
+						<h3 class="detail_title">KT Y 데이터박스</h3>
+						<a href="reference.html" class="btn_view">REFERENCE VIEW ></a>
+						<div class="project">
+							<span>프로젝트</span>
+							<p class="subtxt">다수의 사람들에게 데이터를 보낼 수 있는 데이턱 기능구현. 다수의 사람들에게 데이터를 보낼 수 있는 데이턱 기능구현.</p>
+							<dl>
+							<dt>고객사</dt>
+							<dd class="data_clientname">KT</dd>
+							<dt>구축기간</dt>
+							<dd class="data_buildtime">2018-05-15 ~ 2018-07-31</dd>
+							<dt>서비스 구분</dt>
+							<dd class="data_service">Mobile APP</dd>
+							<dt>업종구분</dt>
+							<dd class="data_type">통신</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn-layerClose">Close</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function($){
+			$(window).on("load",function(){
+				$(".pop-conts.type2 .box").mCustomScrollbar({
+						theme:"rounded",
+					mouseWheel:{ 
+						scrollAmount: "auto", 
+					},
+					scrollInertia: "400",
+				});
+			});
+		})(jQuery);
+	</script>
 </body>
 </html>
