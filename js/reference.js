@@ -1,7 +1,6 @@
 $(document).ready(function(){ 
     var reference01 = $('.gridnav').offset().top;
     var reference_inner02 = $('.reference_inner01').height();
-    console.log(reference01, reference_inner02);
     
     $(".btn_top").click(function(){
 		$('html, body').animate({

@@ -42,7 +42,7 @@ $(document).ready(function(){
         'opacity':'1',
         'pointer-events':'auto',
       });
-      $('.scroll a').css({
+      $('.scroll a, .scroll2 a').css({
         'opacity':'0',
         'pointer-events':'none',
       });
@@ -54,7 +54,7 @@ $(document).ready(function(){
         'opacity':'0',
         'pointer-events':'none',
       });
-      $('.scroll a').css({
+      $('.scroll a, .scroll2 a').css({
         'opacity':'1',
         'pointer-events':'auto',
       });
