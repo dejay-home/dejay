@@ -1,4 +1,5 @@
 $(document).ready(function(){  
+    // AOS.init();
     var visual_area = $(window).height();
     $(".visual_area").css('height', visual_area);
 
