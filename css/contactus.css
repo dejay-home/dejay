@@ -1,14 +1,35 @@
 @charset "utf-8";
 
-.visual_area { position: relative;}
-.visual_area .titlebox { float: left; width:50%; min-height:100vh; position:static; transform: translate(0,0); -webkit-transform: translate(0,0);}
+.visual_area { position: relative; min-height:100vh;}
+.visual_area .titlebox { width:50%; min-width:50%; position:static; transform: translate(0,0); -webkit-transform: translate(0,0);}
+.visual_area .titlebox > div { float:right; width:679px; padding:240px 0; box-sizing:border-box;}
 .visual_area dl { padding:60px 0 72px;}
-.visual_area dl:after { content: ""; display:block; clear: both;}
 .visual_area dl dt { float:left; width:16%; line-height:90px; border-bottom:1px solid rgba(255,255,255,0.05); font-size:17px; color:rgba(255,255,255,0.7);}
 .visual_area dl dd { float:left; width:84%; line-height:90px; border-bottom:1px solid rgba(255,255,255,0.05); font-size:17px; color:rgba(255,255,255,0.35);}
-.visual_area .btn_download { display: inline-block; width:217px; height:68px; line-height:68px; background:#2099b6; text-align:center;}
-.visual_area .btn_download span { display:inline-block; padding-right:32px; line-height:16px; background:url(../img/contactus/ico_download.png) no-repeat right center; font-size:13px; color:rgba(255,255,255,0.8); font-family: 'NanumBarunGothic', sans-serif; font-weight:bold;}
+.visual_area .btn_download { position: relative; display: inline-block; width:217px; height:68px; line-height:68px; background:#fff; text-align:center;}
+.visual_area .btn_download:hover,
+.visual_area .btn_download:active { background:#2099b6}
+.visual_area .btn_download:after {}
+.visual_area .btn_download span { position: relative; display:inline-block; padding-right:24px; line-height:16px; font-size:13px; color:#1b1b1b; font-family: 'NanumBarunGothic', sans-serif; font-weight:bold;}
+.visual_area .btn_download:hover span,
+.visual_area .btn_download:active span { color:rgba(255,255,255,0.8);}
+.visual_area .btn_download span:after { content:""; position:absolute; right:0; top:50%; margin-top:-8px; width:18px; height:16px; background:url(../img/contactus/ico_download1.png) no-repeat center;}
+.visual_area .btn_download:hover span:after,
+.visual_area .btn_download:active span:after { background:url(../img/contactus/ico_download.png) no-repeat center;}
 
-.map { float:right; width:50%; height:inherit; background:blue;}
+.map { position: fixed; right:0; top:0; width:50%; min-width:50%; height:100%; min-height:100vh; background:blue;}
 
 
+
+
+
+
+
+.mCSB_scrollTools { width:1px !important; opacity:0;}
+.mCSB_inside > .mCSB_container { margin-right:0 !important;}
+.simplebar-track.simplebar-horizontal { display:none;}
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail { background-color:transparent !important;}
+#mCSB_1_dragger_vertical {
+    min-height:200px !important;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background-color:transparent !important; border:1px solid rgba(181,181,181,0.4); box-sizing:border-box;}

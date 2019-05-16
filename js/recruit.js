@@ -68,7 +68,7 @@ function sectionClick(){
     });    
 };
 
-function scrollAction (){
+function scrollAction(){
     var recruit_inner01_H = $('.recruit_inner01').offset().top;
     var recruit_inner02_H = $('.recruit_inner02').offset().top;
     var recruit_inner03_H = $('.recruit_inner03').offset().top;
