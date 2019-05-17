@@ -10,12 +10,15 @@
 .visual_area .btn_download:hover,
 .visual_area .btn_download:active { background:#2099b6}
 .visual_area .btn_download:after {}
-.visual_area .btn_download span { position: relative; display:inline-block; padding-right:24px; line-height:16px; font-size:13px; color:#1b1b1b; font-family: 'NanumBarunGothic', sans-serif; font-weight:bold;}
+.visual_area .btn_download span { position: relative; display:inline-block;/* padding-right:24px;*/ line-height:16px; font-size:13px; color:#1b1b1b; font-family: 'NanumBarunGothic', sans-serif; font-weight:bold; transition:.9s cubic-bezier(0,.21,.03,1.01); -webkit-transition:.9s cubic-bezier(0,.21,.03,1.01);}
+.visual_area .btn_download span svg g { fill:#1b1b1b; transition:.9s cubic-bezier(0,.21,.03,1.01); -webkit-transition:.9s cubic-bezier(0,.21,.03,1.01);}
 .visual_area .btn_download:hover span,
 .visual_area .btn_download:active span { color:rgba(255,255,255,0.8);}
-.visual_area .btn_download span:after { content:""; position:absolute; right:0; top:50%; margin-top:-8px; width:18px; height:16px; background:url(../img/contactus/ico_download1.png) no-repeat center;}
+.visual_area .btn_download:hover span svg g,
+.visual_area .btn_download:active span svg g { fill:#fff;}
+.visual_area .btn_download span:after { content:""; position:absolute; right:0; top:50%; margin-top:-8px; width:18px; height:16px; /*background:url(../img/contactus/ico_download1.png) no-repeat center;*/}
 .visual_area .btn_download:hover span:after,
-.visual_area .btn_download:active span:after { background:url(../img/contactus/ico_download.png) no-repeat center;}
+.visual_area .btn_download:active span:after { /*background:url(../img/contactus/ico_download.png) no-repeat center;*/}
 
 .map { position: fixed; right:0; top:0; width:50%; min-width:50%; height:100%; min-height:100vh; background:blue;}
 
