@@ -149,6 +149,7 @@ body {min-width:1358px;height: 100%;font-size:17px; font-family:'NanumSquare', s
     .gnb li.acitve a {opacity:1;}
 
     .language {
+        display:none;
         font-family: 'NanumBarunGothic', 'NanumSquare', sans-serif;
         position: absolute;
         top:39px;

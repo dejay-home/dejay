@@ -1,19 +1,5 @@
 $(document).ready(function(){ 
-    var reference01 = $('.gridnav').offset().top;
-    var reference_inner02 = $('.reference_inner01').height();
-    
-    $(".btn_top").click(function(){
-		$('html, body').animate({
-			scrollTop:0
-		},300, 'swing');
-    });
-    
-    $(".scroll a").click(function(){
-		$('html, body').animate({
-			scrollTop:reference01
-		},300, 'swing');
-    });
-    
+    sectionClick();
 
     var visual_area = $(window).height();
     $(".visual_area").css('height', visual_area);
@@ -76,3 +62,22 @@ $(document).ready(function(){
 
     }
 });
+
+function sectionClick(){
+
+    var reference01 = $('.reference_area').offset().top;
+
+    console.log(reference01);
+    $(".btn_top").click(function(){
+		$('html, body').animate({
+			scrollTop:0
+		},300, 'swing');
+    });
+    
+    // $(".scroll a").click(function(){
+	// 	$('html, body').animate({
+	// 		scrollTop:reference01
+    //     },300, 'swing');
+    //     $(this).css('opacity', '0');
+    // });
+};
